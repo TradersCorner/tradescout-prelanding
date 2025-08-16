@@ -1,1 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://my.ionos.com/domain-details/info.thetradescout.us/sitemap.xml
 
