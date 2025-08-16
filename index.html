@@ -1,378 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- ==================== SEO / SOCIAL ==================== -->
-  <title>TradeScout — Direct Connect for Home Projects & Local Pros</title>
-  <meta name="description" content="TradeScout connects homeowners with verified LOCAL contractors—fast, transparent, and direct. A modern alternative to traditional lead sites like Angi or HomeAdvisor." />
-  <link rel="canonical" href="https://yourdomain.com/" />
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TradeScout – Connection Without Compromise</title>
+  <meta name="description" content="TradeScout connects homeowners and contractors directly. No overpriced leads, no middlemen, just real connections. A modern alternative to outdated lead generation platforms." />
+  <meta name="keywords" content="TradeScout, contractors, homeowners, construction, real estate, roofing, flooring, plumbing, remodeling, Home Depot, Lowes, free estimates, contractor directory" />
 
   <!-- Open Graph -->
+  <meta property="og:title" content="TradeScout – Connection Without Compromise" />
+  <meta property="og:description" content="A new way for contractors and homeowners to connect. No lead generators, no hidden fees – just real growth." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="TradeScout — Direct Connect for Home Projects & Local Pros" />
-  <meta property="og:description" content="Get matched to verified LOCAL contractors without the noise. Post once, compare real work, and hire with confidence." />
-  <meta property="og:url" content="https://yourdomain.com/" />
-  <meta property="og:image" content="https://yourdomain.com/og-image.jpg" />
+  <meta property="og:image" content="assets/518360109_637889676022235_9100352886396500626_n.jpg" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="TradeScout — Direct Connect for Home Projects & Local Pros" />
-  <meta name="twitter:description" content="A modern alternative to lead marketplaces. Verified pros, real work, direct connection." />
-  <meta name="twitter:image" content="https://yourdomain.com/og-image.jpg" />
+  <meta name="twitter:title" content="TradeScout – Connection Without Compromise" />
+  <meta name="twitter:description" content="Join the modern alternative to outdated lead platforms. Contractors and homeowners connect freely with TradeScout." />
 
-  <!-- (Optional) oEmbed for LLMs/content previews -->
-  <link rel="alternate" type="application/json+oembed" href="https://yourdomain.com/oembed.json" title="TradeScout Overview" />
-
-  <!-- ==================== JSON-LD (LLM + SEO) ==================== -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://yourdomain.com/#website",
-        "url": "https://yourdomain.com/",
-        "name": "TradeScout",
-        "inLanguage": "en",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://yourdomain.com/search?q={query}",
-          "query-input": "required name=query"
-        }
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://yourdomain.com/#org",
-        "name": "TradeScout",
-        "url": "https://yourdomain.com/",
-        "description": "Direct Connect for construction and home improvement: verified LOCAL contractors, transparent project matching, and no broken lead systems.",
-        "logo": "https://yourdomain.com/logo-icon.png",
-        "sameAs": [
-          "https://www.facebook.com/yourbrand",
-          "https://www.instagram.com/yourbrand",
-          "https://www.linkedin.com/company/yourbrand"
-        ],
-        "contactPoint": [{
-          "@type": "ContactPoint",
-          "contactType": "customer support",
-          "email": "support@yourdomain.com",
-          "areaServed": "US"
-        }]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://yourdomain.com/#service",
-        "name": "Home Project Matching & Contractor Connection",
-        "serviceType": "Home Improvement & Construction",
-        "provider": { "@id": "https://yourdomain.com/#org" },
-        "areaServed": "LOCAL",
-        "description": "A modern alternative to marketplaces like Angi or HomeAdvisor: verified pros, project transparency, and direct connection without bidding wars.",
-        "brand": { "@id": "https://yourdomain.com/#org" }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://yourdomain.com/#faq",
-        "mainEntity": [
-          {
-            "@type":"Question",
-            "name":"How is TradeScout different from Angi or HomeAdvisor?",
-            "acceptedAnswer":{"@type":"Answer","text":"TradeScout focuses on verified LOCAL pros and direct project matching. Homeowners see real work before booking and professionals connect directly—without the noise of generic lead lists."}
-          },
-          {
-            "@type":"Question",
-            "name":"Is TradeScout for small repairs or larger remodels?",
-            "acceptedAnswer":{"@type":"Answer","text":"Both. From urgent repairs to full renovations, we match homeowners with vetted, insured professionals who have relevant, proven work nearby."}
-          },
-          {
-            "@type":"Question",
-            "name":"Do you work with Home Depot or Lowe’s contractors?",
-            "acceptedAnswer":{"@type":"Answer","text":"We’re independent. Many pros on TradeScout also source materials from retailers like Home Depot or Lowe’s, but hiring happens directly with the contractor you choose."}
-          },
-          {
-            "@type":"Question",
-            "name":"How are contractors verified?",
-            "acceptedAnswer":{"@type":"Answer","text":"We review insurance, local reputation, and real project outcomes. Pros earn visibility by demonstrating quality and reliability over time."}
-          }
-        ]
-      }
-    ]
+    "@type": "WebSite",
+    "name": "TradeScout",
+    "url": "https://yourdomain.com",
+    "description": "TradeScout connects contractors and homeowners without middlemen or overpriced leads.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "TradeScout"
+    }
   }
   </script>
 
-  <!-- ==================== STYLE (uses your app tokens) ==================== -->
   <style>
-    :root{
-      /* From your ZIP (client/src/index.css) */
-      --bg-primary:hsl(213,35%,8%);
-      --bg-secondary:hsl(211,24%,14%);
-      --bg-tertiary:hsl(210,21%,20%);
-      --bg-quaternary:hsl(209,18%,27%);
-      --text-primary:hsl(210,20%,89%);
-      --text-secondary:hsl(210,14%,71%);
-      --text-muted:hsl(210,10%,62%);
-      --orange-primary:hsl(15,100%,60%);
-      --orange-secondary:hsl(15,79%,54%);
-      --success:hsl(142,76%,46%);
-      --warning:hsl(38,92%,50%);
-      --error:hsl(0,84%,60%);
-      --border-primary:hsl(210,18%,27%);
-      --radius:12px; --radius-lg:16px;
-      --shadow:0 16px 40px rgba(0,0,0,.35);
-      --purple:#8B5CF6; /* ACCELERATOR PROGRAM */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #eee;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box} html,body{height:100%}
-    body{
-      margin:0; color:var(--text-primary);
-      font:16px/1.6 ui-sans-serif,system-ui,-apple-system,Segoe UI,Inter,Roboto,Arial;
-      background:
-        radial-gradient(1200px 900px at 20% -10%, #13202A 0%, transparent 60%),
-        linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+    header {
+      background: linear-gradient(135deg, #ff6600, #ff3300);
+      padding: 60px 20px;
+      text-align: center;
     }
-    .wrap{max-width:1180px;margin:auto;padding:24px}
-    header{padding:34px 0 16px}
-    h1{font-size:clamp(28px,4.8vw,44px);line-height:1.15;margin:10px 0 8px}
-    h2{font-size:clamp(22px,3.2vw,28px);margin:0 0 10px}
-    .muted{color:var(--text-secondary)}
-    .brandline{height:1px;background:linear-gradient(90deg, transparent, var(--border-primary), transparent);margin:8px 0 18px}
-    .pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--text-secondary);
-          border:1px solid var(--border-primary);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.02)}
-    .card{
-      background:linear-gradient(180deg,var(--bg-tertiary),var(--bg-quaternary));
-      border:1px solid var(--border-primary);
-      border-radius:var(--radius-lg);
-      box-shadow:var(--shadow);
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(255,100,0,0.6);
     }
-    .pad{padding:18px}
-    .row{display:flex;gap:10px;flex-wrap:wrap}
-
-    input,select,textarea,button{
-      width:100%; padding:12px 14px; border-radius:12px;
-      border:1px solid var(--border-primary);
-      background:rgba(15,21,32,.85); color:var(--text-primary); outline:none; transition:.2s;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
     }
-    input::placeholder,textarea::placeholder{color:var(--text-muted)}
-    input:focus,select:focus,textarea:focus{border-color:#2A4354; box-shadow:0 0 0 3px rgba(42,67,84,.25)}
-    button{background:var(--orange-primary);border:none;color:#0B0F13;font-weight:800;cursor:pointer}
-    button:hover{background:var(--orange-secondary)}
-
-    .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:start}
-    .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0}
-    .tile{padding:16px;border:1px solid var(--border-primary);border-radius:16px;background:rgba(255,255,255,.02)}
-    .tile .kpi{font-weight:800;margin-top:6px}
-
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid var(--border-primary);background:#0d151c;cursor:zoom-in}
-    .lightbox{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(7,10,14,.86);padding:22px;z-index:60}
-    .lightbox.open{display:flex}
-    .lightbox img{max-width:95vw;max-height:90vh;border-radius:12px;border:1px solid var(--border-primary)}
-
-    .list{display:grid;gap:10px}
-    .project{display:flex;justify-content:space-between;align-items:center;gap:12px;
-             padding:14px;border:1px solid var(--border-primary);border-radius:14px;background:rgba(255,255,255,.02)}
-    .tag{font-size:12px;padding:4px 8px;border-radius:999px;background:rgba(234,179,8,.12);color:#FFF3C4;border:1px solid rgba(234,179,8,.25)}
-    .price{font-weight:800}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}
-    footer{margin:28px 0 34px;color:#8fa2b0;font-size:14px}
-
-    @media (max-width:1060px){
-      .hero,.two{grid-template-columns:1fr}
-      .tiles{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(2,1fr)}
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
-    @media (max-width:560px){
-      .tiles{grid-template-columns:1fr}
+    section h2 {
+      text-align: center;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 15px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    }
+    form {
+      text-align: center;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    input[type="email"] {
+      padding: 12px;
+      font-size: 1rem;
+      width: 90%;
+      max-width: 350px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      background: #ff6600;
+      border: none;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 90%;
+      max-width: 200px;
+    }
+    button:hover {
+      background: #e55c00;
+    }
+    footer {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+      section {
+        padding: 30px 15px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <span class="pill">Coming Soon</span>
-      <h1>Direct Connect</h1>
-      <p class="muted">Connection without compromise. Get notified when we go live and preview what’s coming.</p>
-      <div class="brandline"></div>
-    </header>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="hero">
-      <!-- Waitlist -->
-      <form class="card pad" id="waitlist" action="FORM_ENDPOINT_WAITLIST" method="POST">
-        <strong style="display:block;margin-bottom:8px">Join the waitlist</strong>
-        <div class="row">
-          <input name="email" type="email" placeholder="Email" required aria-label="Email" />
-          <input name="area"  type="text" placeholder="Your LOCAL area (optional)" aria-label="Local area" />
-        </div>
-        <div class="row" style="margin-top:10px">
-          <select name="persona" aria-label="I am a">
-            <option value="homeowner">Homeowner</option>
-            <option value="contractor">Contractor</option>
-            <option value="territory_manager">Territory Manager</option>
-          </select>
-          <button type="submit">Notify Me</button>
-        </div>
-        <p class="muted" style="font-size:12px;margin:8px 0 0">No spam. Unsubscribe anytime.</p>
-      </form>
+<header>
+  <h1>Connection Without Compromise</h1>
+  <p>TradeScout is the modern alternative to overpriced lead generators. Forget the prehistoric predecessors – this is direct connection, not data reselling.</p>
+</header>
 
-      <!-- Preview/gallery -->
-      <div class="card pad">
-        <strong>Preview</strong>
-        <div class="gallery" id="gallery">
-          <img src="assets/screen-1.jpg" alt="Kitchen remodel preview — verified LOCAL contractor project" />
-          <img src="assets/screen-2.jpg" alt="Roof repair preview — verified LOCAL contractor project" />
-          <img src="assets/screen-3.jpg" alt="Bathroom renovation preview — verified LOCAL contractor project" />
-          <img src="assets/screen-4.jpg" alt="Exterior upgrade preview — verified LOCAL contractor project" />
-          <img src="assets/screen-5.jpg" alt="Plumbing repair preview — verified LOCAL contractor project" />
-          <img src="assets/screen-6.jpg" alt="Electrical upgrade preview — verified LOCAL contractor project" />
-        </div>
-      </div>
-    </section>
+<section>
+  <h2>Why TradeScout?</h2>
+  <p>
+    Homeowners shouldn’t be sold to the highest bidder. Contractors shouldn’t have to fight over the same overpriced “lead.”
+    TradeScout is built to eliminate the middlemen, giving both sides what they truly want:
+    <strong>trust, transparency, and opportunity without compromise.</strong>
+  </p>
+</section>
 
-    <!-- ==================== KPI Tiles ==================== -->
-    <section class="tiles" aria-label="Platform metrics">
-      <div class="tile"><div class="muted">Total Projects</div><div class="kpi">3</div></div>
-      <div class="tile"><div class="muted">Active</div><div class="kpi">2</div></div>
-      <div class="tile"><div class="muted">Completed</div><div class="kpi">1</div></div>
-      <div class="tile"><div class="muted">Total Invested</div><div class="kpi">$15,450</div></div>
-    </section>
-
-    <!-- ==================== Comparison (Angi/HomeAdvisor intent) ==================== -->
-    <section class="card pad" aria-labelledby="compare">
-      <h2 id="compare">A modern alternative to lead marketplaces</h2>
-      <p class="muted">
-        TradeScout connects homeowners to verified LOCAL contractors with real project proof—so you can compare quality before you book.
-        If you’ve tried Angi or HomeAdvisor, you’ll appreciate how direct and transparent this is.
-      </p>
-      <div class="list" style="margin-top:10px">
-        <div class="project"><div><b>Direct connection</b><div class="muted">Message the pro you pick. No noisy call lists.</div></div></div>
-        <div class="project"><div><b>Verified LOCAL work</b><div class="muted">Portfolios and before/after photos from your area.</div></div></div>
-        <div class="project"><div><b>Fit for any scope</b><div class="muted">Small repairs to full remodels; planning to punch-list.</div></div></div>
-      </div>
-      <!-- Optional internal links for SEO: create these pages later -->
-      <p class="muted" style="margin-top:10px;font-size:14px">
-        Looking for more detail? See our comparisons:
-        <a href="/compare/angi">Angi</a> · <a href="/compare/homeadvisor">HomeAdvisor</a>
-      </p>
-    </section>
-
-    <!-- ==================== Use-cases (Construction/Real Estate intent) ==================== -->
-    <section class="two" aria-labelledby="usecases">
-      <div class="card pad">
-        <h2 id="usecases">Homeowners & Real Estate</h2>
-        <ul class="list">
-          <li class="project"><div><b>Make-ready & punch-list</b><div class="muted">Prep listings and rentals, fast.</div></div></li>
-          <li class="project"><div><b>Remodels & upgrades</b><div class="muted">Kitchen, bath, exterior refreshes.</div></div></li>
-          <li class="project"><div><b>Emergency fixes</b><div class="muted">Plumbing, electrical, roofing—verified help near you.</div></div></li>
-        </ul>
-      </div>
-      <div class="card pad">
-        <h2>Contractors & Trades</h2>
-        <ul class="list">
-          <li class="project"><div><b>Direct bookings</b><div class="muted">Clients reach you based on proof of work, not lead lists.</div></div></li>
-          <li class="project"><div><b>LOCAL recognition</b><div class="muted">Earn visibility by delivering quality.</div></div></li>
-          <li class="project"><div><b>Materials & logistics</b><div class="muted">Use any supplier—many pros source from Home Depot or Lowe’s.</div></div></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ==================== SEO/LLMO FAQ ==================== -->
-    <section class="card pad" id="faq" aria-labelledby="faqtitle">
-      <h2 id="faqtitle">FAQ</h2>
-      <details><summary>Is TradeScout like Angi or HomeAdvisor?</summary>
-        <p class="muted">TradeScout emphasizes verified LOCAL work, direct connections, and project transparency—so you choose based on real results, not lead lists.</p>
-      </details>
-      <details><summary>Can I use TradeScout for small jobs?</summary>
-        <p class="muted">Yes. Post once, match to reliable pros, compare real work, and hire with confidence.</p>
-      </details>
-      <details><summary>Do contractors provide materials?</summary>
-        <p class="muted">Many do. Others work with your preferred retailers, including Home Depot and Lowe’s—discuss scope and materials during your quote.</p>
-      </details>
-    </section>
-
-    <!-- ==================== Growth vs Accelerator (purple rule) ==================== -->
-    <section class="two">
-      <div class="card pad" style="border-color:#3a2b22;background:rgba(255,111,61,.06)">
-        <h2>Free Growth Pack</h2>
-        <p class="muted">Templates, pricing guides, and checklists to grow faster.</p>
-        <ul style="margin:0 0 12px 18px">
-          <li>Marketing templates</li><li>Pricing strategy guides</li><li>Customer scripts</li>
-        </ul>
-        <button type="button">Download Free Growth Pack</button>
-      </div>
-      <div class="card pad" style="border-color:#3d2e68;background:rgba(139,92,246,.10)">
-        <h2 style="color:var(--purple)">ACCELERATOR PROGRAM</h2>
-        <p class="muted">Advanced tools and coaching for serious growth.</p>
-        <ul style="margin:0 0 12px 18px">
-          <li>1-on-1 coaching</li><li>Priority opportunities</li><li>Exclusive network</li>
-        </ul>
-        <button type="button" style="background:var(--purple);color:#0B0F13;border:none">Apply to Join</button>
-      </div>
-    </section>
-
-    <!-- ==================== Contact ==================== -->
-    <section class="two">
-      <form class="card pad" id="contact" action="FORM_ENDPOINT_CONTACT" method="POST" novalidate>
-        <h2>Contact</h2>
-        <div class="row">
-          <input name="name" placeholder="Full name" required />
-          <input name="email" type="email" placeholder="Email" required />
-        </div>
-        <div style="margin-top:10px"><textarea name="message" rows="5" placeholder="How can we help?" required></textarea></div>
-        <div class="row" style="margin-top:10px">
-          <button type="submit">Send</button>
-          <span id="contactStatus" class="muted" aria-live="polite"></span>
-        </div>
-      </form>
-
-      <div class="card pad" aria-label="Local snapshot">
-        <h2>Your LOCAL Snapshot</h2>
-        <div class="two" style="gap:10px">
-          <div class="tile"><div class="muted">Total Activity</div><div class="kpi" style="color:#FFB4A0">189</div></div>
-          <div class="tile"><div class="muted">Contractors</div><div class="kpi" style="color:#6AB3FF">18</div></div>
-          <div class="tile"><div class="muted">Homeowners</div><div class="kpi" style="color:#7FE6B4">27</div></div>
-          <div class="tile"><div class="muted">Total Users</div><div class="kpi" style="color:#C7A7FF">45</div></div>
-        </div>
-      </div>
-    </section>
-
-    <footer>© <span id="yr"></span> TradeScout · Direct Connect</footer>
+<section>
+  <h2>Preview What’s Coming</h2>
+  <div class="gallery">
+    <img src="assets/518360109_637889676022235_9100352886396500626_n.jpg" alt="TradeScout Dashboard Preview">
+    <img src="assets/532563632_637889646022238_1530481818227593628_n.jpg" alt="TradeScout Golden Emblem">
+    <img src="assets/533067349_637887526022450_1623738740692359526_n.jpg" alt="Helpers Marketplace">
+    <img src="assets/533570645_637889732688896_8600311390429281396_n.jpg" alt="Local Community Insights">
+    <img src="assets/534555119_637887569355779_5819938751014865548_n.jpg" alt="Contractor Growth Programs">
   </div>
+</section>
 
-  <!-- ==================== LIGHTBOX ==================== -->
-  <div id="lightbox" class="lightbox" role="dialog" aria-label="Image preview">
-    <img id="lbImg" alt="Expanded preview" />
-  </div>
+<section>
+  <h2>Be First to Know</h2>
+  <p style="text-align:center;">Sign up now and get notified the moment TradeScout goes live.</p>
+  <form onsubmit="saveEmail(event)">
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit">Notify Me</button>
+  </form>
+  <p id="confirmation" style="color:lightgreen; margin-top:10px; text-align:center;"></p>
+</section>
 
-  <!-- ==================== JS (lightbox + form demo) ==================== -->
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+<footer>
+  <p>&copy; 2025 TradeScout – Direct Connection. Without Compromise.</p>
+</footer>
 
-    // Lightbox
-    const g = document.getElementById('gallery');
-    const lb = document.getElementById('lightbox');
-    const lbImg = document.getElementById('lbImg');
-    g?.addEventListener('click', e => {
-      const t = e.target; if (t.tagName === 'IMG'){ lbImg.src = t.src; lb.classList.add('open'); }
-    });
-    lb.addEventListener('click', ()=> lb.classList.remove('open'));
+<script>
+  function saveEmail(event) {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    let list = JSON.parse(localStorage.getItem('emails') || "[]");
+    list.push(email);
+    localStorage.setItem('emails', JSON.stringify(list));
+    document.getElementById('confirmation').innerText = "Thanks! You'll be notified.";
+    document.getElementById('email').value = "";
+  }
+</script>
 
-    // Forms — replace FORM_ENDPOINT_* with your endpoints (e.g., Formspree)
-    async function send(form, statusEl){
-      const ep = form.getAttribute('action');
-      if(!ep || ep.startsWith('FORM_ENDPOINT_')){
-        statusEl && (statusEl.textContent = 'Saved (demo mode)'); form.reset(); return;
-      }
-      const fd = new FormData(form); const payload = Object.fromEntries(fd.entries());
-      try{
-        const r = await fetch(ep,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
-        statusEl && (statusEl.textContent = r.ok ? 'Thanks — we’ll be in touch.' : 'Error — try again.');
-        if(r.ok) form.reset();
-      }catch{ statusEl && (statusEl.textContent = 'Network error'); }
-    }
-    document.getElementById('contact')?.addEventListener('submit', e=>{e.preventDefault();send(e.target, document.getElementById('contactStatus'))});
-    document.getElementById('waitlist')?.addEventListener('submit', e=>{e.preventDefault();send(e.target, { set textContent(_){} }); alert('Added to waitlist.');});
-  </script>
 </body>
 </html>
