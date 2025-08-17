@@ -5,11 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TradeScout — Connection Without Compromise</title>
   <meta name="description" content="TradeScout connects homeowners and verified contractors directly—no gatekeepers, no spam. Get early access." />
+  <meta name="theme-color" content="#0e0e0f" />
+  <meta name="color-scheme" content="dark light" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TradeScout — Connection Without Compromise" />
+  <meta property="og:description" content="TradeScout connects homeowners and verified contractors directly—no gatekeepers, no spam. Get early access." />
+  <meta property="og:type" content="website" />
+  <!-- Replace with your absolute URL -->
+  <meta property="og:url" content="https://example.com/" />
+  <!-- Replace with your actual social image -->
+  <meta property="og:image" content="assets/og/tradescout-og.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TradeScout — Connection Without Compromise" />
+  <meta name="twitter:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
+  <meta name="twitter:image" content="assets/og/tradescout-og.jpg" />
 
   <!-- Optional font (safe to remove if you prefer system fonts only) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Favicons (replace paths with your files) -->
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
   <style>
     :root{
@@ -41,6 +63,14 @@
 
     .container{width:min(var(--maxw),92vw);margin-inline:auto}
 
+    /* Visually hidden for a11y labels */
+    .sr-only{
+      position:absolute!important;
+      width:1px;height:1px;
+      padding:0;margin:-1px;overflow:hidden;
+      clip:rect(0,0,0,0);white-space:nowrap;border:0;
+    }
+
     /* Top bar */
     header{
       position:sticky;top:0;z-index:50;
@@ -65,6 +95,8 @@
     .cta:hover{transform:translateY(-1px)}
     .cta:active{transform:translateY(0)}
     .cta svg{opacity:.9}
+    .cta-link{display:none}
+    noscript .cta-link{display:inline-flex}
 
     /* Hero */
     .hero{padding:72px 0 32px;text-align:center}
@@ -93,10 +125,12 @@
     @media (min-width:1024px){.card{grid-column:span 3}}
 
     .card-media{
-      height:140px;background: var(--panel);
-      background-image: var(--img, none);
-      background-size: cover;background-position:center;
+      height:180px;background: var(--panel);
       border-bottom:1px solid rgba(255,255,255,.06);
+      display:flex;align-items:center;justify-content:center;overflow:hidden;
+    }
+    .card-media img{
+      width:100%;height:100%;object-fit:cover;
     }
     .card-body{padding:18px 18px 20px}
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
@@ -139,6 +173,19 @@
 
     footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.06);color:#9da3aa;text-align:center;font-size:14px}
   </style>
+
+  <!-- JSON-LD (basic Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"TradeScout",
+    "url":"https://example.com/",
+    "logo":"https://example.com/assets/icon.svg",
+    "description":"TradeScout connects homeowners and verified contractors directly—no gatekeepers, no spam.",
+    "sameAs":[]
+  }
+  </script>
 </head>
 <body>
 
@@ -146,10 +193,17 @@
   <header>
     <div class="container nav">
       <div class="brand">TradeScout</div>
+      <!-- JS-enhanced button + noscript fallback link -->
       <button class="cta" data-scroll="#signup" aria-label="Get early access">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
       </button>
+      <noscript>
+        <a class="cta cta-link" href="#signup" aria-label="Get early access">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+          Get Early Access
+        </a>
+      </noscript>
     </div>
   </header>
 
@@ -161,10 +215,16 @@
       Skip the noise and connect with the right people—fast.
     </p>
     <div class="cta-wrap">
-      <button class="cta" data-scroll="#signup">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+      <button class="cta" data-scroll="#signup" aria-label="Get early access">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
       </button>
+      <noscript>
+        <a class="cta cta-link" href="#signup" aria-label="Get early access">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+          Get Early Access
+        </a>
+      </noscript>
     </div>
   </section>
 
@@ -174,8 +234,10 @@
 
     <div class="feature-grid">
       <!-- Accelerated Growth -->
-      <article class="card" style="--img:url('assets/images/accelerated-growth.jpg')">
-        <div class="card-media" role="presentation" aria-hidden="true"></div>
+      <article class="card">
+        <div class="card-media" role="img" aria-label="Accelerated growth imagery">
+          <img src="assets/images/accelerated-growth.jpg" alt="" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Accelerated Growth</h3>
           <p>Get in front of real homeowners—no paywall, no junk leads.</p>
@@ -183,8 +245,10 @@
       </article>
 
       <!-- Find Helpers & Employees -->
-      <article class="card" style="--img:url('assets/images/find-helpers-employees.jpg')">
-        <div class="card-media" role="presentation" aria-hidden="true"></div>
+      <article class="card">
+        <div class="card-media" role="img" aria-label="Find helpers and employees">
+          <img src="assets/images/find-helpers-employees.jpg" alt="" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Find Helpers &amp; Employees</h3>
           <p>Post roles, meet reliable helpers, and build your crew faster.</p>
@@ -192,8 +256,10 @@
       </article>
 
       <!-- Direct Connect -->
-      <article class="card" style="--img:url('assets/images/direct-connect.jpg')">
-        <div class="card-media" role="presentation" aria-hidden="true"></div>
+      <article class="card">
+        <div class="card-media" role="img" aria-label="Direct connection between homeowners and contractors">
+          <img src="assets/images/direct-connect.jpg" alt="" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Direct Connect</h3>
           <p>Homeowners and contractors, connected directly—no middlemen.</p>
@@ -201,8 +267,10 @@
       </article>
 
       <!-- Homeowner Tools -->
-      <article class="card" style="--img:url('assets/images/homeowner-tools.jpg')">
-        <div class="card-media" role="presentation" aria-hidden="true"></div>
+      <article class="card">
+        <div class="card-media" role="img" aria-label="Homeowner project planning tools">
+          <img src="assets/images/homeowner-tools.jpg" alt="" loading="lazy" decoding="async">
+        </div>
         <div class="card-body">
           <h3>Homeowner Tools</h3>
           <p>Plan projects, request bids, and hire with confidence.</p>
@@ -212,7 +280,7 @@
   </section>
 
   <!-- Social proof ribbon -->
-  <div class="ribbon">
+  <div class="ribbon" role="status" aria-live="polite">
     Join 500,000+ people who already trust TradeScout. Be part of the future of home improvement.
   </div>
 
@@ -221,33 +289,61 @@
     <h2 id="get-started" class="section-title" style="text-align:center">Get Early Access</h2>
     <p class="lead">Drop your email and we’ll notify you the moment we go live.</p>
 
-    <form class="form" action="https://formspree.io/f/xovlzjlq" method="POST">
+    <form class="form" action="https://formspree.io/f/xovlzjlq" method="POST" data-analytics="signup-form">
       <!-- Email (required) -->
-      <input class="field" type="email" name="email" placeholder="Your Email (required)" required aria-label="Email (required)" />
+      <div>
+        <label class="sr-only" for="email">Email (required)</label>
+        <input
+          class="field"
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Your Email (required)"
+          required
+          inputmode="email"
+          autocomplete="email"
+          aria-required="true"
+        />
+      </div>
 
       <!-- Name (optional) -->
-      <input class="field" type="text" name="name" placeholder="Your Name (optional)" aria-label="Your name" />
+      <div>
+        <label class="sr-only" for="name">Your name (optional)</label>
+        <input
+          class="field"
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Your Name (optional)"
+          autocomplete="name"
+        />
+      </div>
 
       <!-- State (optional) -->
-      <select class="field" name="state" aria-label="Your state (optional)">
-        <option value="">Your State (optional)</option>
-        <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
-        <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
-        <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
-        <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
-        <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
-        <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
-        <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
-        <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
-        <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
-        <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
-        <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
-        <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
-        <option>WI</option><option>WY</option>
-      </select>
+      <div>
+        <label class="sr-only" for="state">Your state (optional)</label>
+        <select class="field" id="state" name="state" autocomplete="address-level1">
+          <option value="">Your State (optional)</option>
+          <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+          <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+          <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+          <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+          <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+          <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+          <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+          <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+          <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+          <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+          <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+          <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+          <option>WI</option><option>WY</option>
+        </select>
+      </div>
 
       <!-- Submit -->
-      <button class="btn" type="submit">Notify Me</button>
+      <button class="btn" type="submit" aria-label="Notify me when TradeScout launches">Notify Me</button>
+
+      <!-- Redirect after submit -->
       <input type="hidden" name="_redirect" value="thank-you.html" />
     </form>
   </section>
@@ -263,7 +359,29 @@
         if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
       });
     });
+
+    // Basic analytics hooks (replace with your provider)
+    // Example for Google Tag Manager: push events to dataLayer
+    window.dataLayer = window.dataLayer || [];
+    const form = document.querySelector('form[data-analytics="signup-form"]');
+    if(form){
+      form.addEventListener('submit', ()=>{
+        try{
+          window.dataLayer.push({event:'signup_submit', location:'landing'});
+        }catch(e){}
+      });
+    }
   </script>
+
+  <!-- Google Tag Manager (optional) -->
+  <!--
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  </script>
+  -->
 </body>
 </html>
-
