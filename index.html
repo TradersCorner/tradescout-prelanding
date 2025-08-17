@@ -3,217 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TradeScout – Connection Without Compromise</title>
+  <title>TradeScout – What’s Coming</title>
   <style>
     body {
       margin: 0;
-      font-family: "Segoe UI", Roboto, Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: #fff;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0d0d0d;
+      color: #ddd;
+      line-height: 1.6;
     }
 
-    header {
+    h1, h2, h3 {
       text-align: center;
-      padding: 60px 20px 20px;
     }
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      color: #ff5c00;
-      margin-bottom: 15px;
+    h1 {
+      color: #ff5a00;
+      margin-top: 40px;
+      font-size: 2.5rem;
     }
 
-    header p {
+    h2 {
+      margin: 10px 0;
       font-size: 1.2rem;
-      color: #aaa;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-
-    section h2 {
-      font-size: 2rem;
-      color: #ff5c00;
-      margin-bottom: 12px;
-      text-align: center;
-    }
-
-    section p {
-      text-align: center;
+      font-weight: normal;
       color: #bbb;
-      margin-bottom: 40px;
-      font-size: 1rem;
     }
 
-    /* Modern grid */
-    .feature-grid {
+    h3 {
+      margin: 5px 0 40px;
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #ff5a00;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 35px;
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto 80px;
+      padding: 0 20px;
     }
 
-    .feature-card {
-      position: relative;
-      border-radius: 18px;
+    .card {
+      background: #141414;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
 
-    .feature-card img {
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.8);
+    }
+
+    .card img {
       width: 100%;
-      height: 240px;
-      object-fit: cover;
       display: block;
+      height: 180px;
+      object-fit: cover;
     }
 
-    .feature-overlay {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
+    .card-content {
       padding: 20px;
-      background: linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.2));
+      text-align: center;
     }
 
-    .feature-overlay h3 {
-      margin: 0;
-      font-size: 1.3rem;
-      color: #ff5c00;
+    .card-title {
+      color: #ff5a00;
+      font-size: 1.25rem;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
-    .feature-overlay p {
-      margin-top: 8px;
+    .card-text {
       font-size: 0.95rem;
-      color: #ddd;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.7);
-    }
-
-    /* Signup */
-    .signup {
-      margin-top: 70px;
-      background: #111;
-      border-radius: 18px;
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .signup h3 {
-      color: #ff5c00;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-    }
-
-    .signup input[type="email"] {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: none;
-      margin-bottom: 15px;
-      font-size: 1rem;
-    }
-
-    .signup button {
-      background: #ff5c00;
-      border: none;
-      padding: 12px 20px;
-      font-size: 1rem;
-      color: #fff;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .signup button:hover {
-      background: #e65100;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      margin-top: 50px;
-      color: #666;
-      font-size: 0.9rem;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Connection Without Compromise</h1>
-    <p>The first truly free platform for contractors & homeowners. No leads. No spam. Just results.</p>
-  </header>
+  <h1>🚀 What’s Coming</h1>
+  <h2>A glimpse of the TradeScout experience</h2>
+  <h3>Join over 500,000 homeowners & contractors across the USA</h3>
 
-  <section>
-    <h2>🚀 What’s Coming</h2>
-    <p>A glimpse of the TradeScout experience:</p>
+  <div class="grid">
 
-    <div class="feature-grid">
-      <div class="feature-card">
-        <img src="assets/images/tools and snapshots for homeowners.jpg" alt="Homeowner Request Form">
-        <div class="feature-overlay">
-          <h3>Homeowner Request Form</h3>
-          <p>Find trusted contractors without spam or endless calls.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <img src="assets/images/accelerated growth for local trusted contractors.jpg" alt="Verified Contractor Profiles">
-        <div class="feature-overlay">
-          <h3>Verified Contractor Profiles</h3>
-          <p>Every contractor is insured, reviewed, and verified.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <img src="assets/images/find helpers and employees.jpg" alt="Contractor Directory">
-        <div class="feature-overlay">
-          <h3>Contractor Directory</h3>
-          <p>Discover top-rated pros in your area, fast and free forever.</p>
-        </div>
-      </div>
-
-      <div class="feature-card">
-        <img src="assets/images/number one source for number one sources.jpg" alt="Growth Tools">
-        <div class="feature-overlay">
-          <h3>Growth Tools</h3>
-          <p>Exclusive tools and resources for both homeowners and contractors.</p>
-        </div>
+    <!-- Homeowner Request Form -->
+    <div class="card">
+      <img src="assets/images/tools and snapshots for homeowners.jpg" alt="Homeowner Request Form">
+      <div class="card-content">
+        <div class="card-title">Homeowner Request Form</div>
+        <p class="card-text">Find trusted contractors without spam or endless calls.</p>
       </div>
     </div>
-  </section>
 
-  <section class="signup">
-    <h3>📩 Stay Updated</h3>
-    <p>Join our waitlist and be the first to experience TradeScout when it launches.</p>
-    <form action="thank-you.html" method="POST">
-      <input type="email" name="email" placeholder="Enter your email" required>
-      <button type="submit">Join the Waitlist</button>
-    </form>
-  </section>
+    <!-- Verified Contractor Profiles -->
+    <div class="card">
+      <img src="assets/images/accelerated growth for local trusted contractors.jpg" alt="Verified Contractor Profiles">
+      <div class="card-content">
+        <div class="card-title">Verified Contractor Profiles</div>
+        <p class="card-text">Every contractor is insured, reviewed, and verified.</p>
+      </div>
+    </div>
 
-  <footer>
-    <p>© 2025 TradeScout. All Rights Reserved.</p>
-  </footer>
+    <!-- Contractor Directory -->
+    <div class="card">
+      <img src="assets/images/number one source for number one sources.jpg" alt="Contractor Directory">
+      <div class="card-content">
+        <div class="card-title">Contractor Directory</div>
+        <p class="card-text">Discover top-rated pros in your area, fast and free forever.</p>
+      </div>
+    </div>
+
+    <!-- Growth Tools -->
+    <div class="card">
+      <img src="assets/images/find helpers and employees.jpg" alt="Growth Tools">
+      <div class="card-content">
+        <div class="card-title">Growth Tools</div>
+        <p class="card-text">Exclusive tools and resources for both homeowners and contractors.</p>
+      </div>
+    </div>
+
+  </div>
 
 </body>
 </html>
-
-
-
-
-
-
