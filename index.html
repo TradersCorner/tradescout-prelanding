@@ -4,155 +4,216 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TradeScout – Connection Without Compromise</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0b0b0b;
-      color: #f5f5f5;
-    }
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #0d0d0d; color: #fff; line-height: 1.6; }
+
     header {
+      padding: 80px 10%;
       text-align: center;
-      padding: 80px 20px 40px;
-      background: linear-gradient(to bottom, #111, #0b0b0b);
+      background: linear-gradient(180deg, #111, #0d0d0d);
     }
     header h1 {
-      font-size: 2.5rem;
-      color: #ff6600;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #ccc;
-      margin-top: 10px;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    h2 {
-      text-align: center;
-      color: #ff6600;
+      font-size: 2.8rem;
+      color: #ff5500;
       margin-bottom: 20px;
     }
-    p.section-sub {
-      text-align: center;
+    header p {
       color: #ccc;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Section Headings */
+    section h2 {
+      font-size: 2rem;
+      color: #ff5500;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    section .intro {
+      text-align: center;
+      color: #ddd;
       margin-bottom: 40px;
     }
-    .gallery {
-      display: flex;
-      justify-content: center;
+
+    /* Showcase Grid */
+    .showcase {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      flex-wrap: wrap;
+      margin: 0 auto 80px;
+      max-width: 1200px;
+      padding: 0 10%;
     }
-    .gallery div {
+    .card {
       background: #1a1a1a;
-      border-radius: 12px;
+      border-radius: 16px;
       overflow: hidden;
-      text-align: center;
-      max-width: 350px;
-      flex: 1;
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
     }
-    .gallery div:hover {
-      transform: translateY(-8px);
+    .card:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 12px 30px rgba(255, 85, 0, 0.3);
     }
-    .gallery img {
+    .card img {
       width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
       display: block;
     }
-    .gallery p {
-      padding: 15px;
-      font-weight: bold;
-      color: #ff6600;
-    }
+    .card-content { padding: 20px; text-align: center; }
+    .card-content h3 { color: #ff5500; margin-bottom: 10px; font-size: 1.4rem; }
+    .card-content p { color: #bbb; font-size: 0.95rem; }
+
+    /* Testimonials */
     .testimonials {
-      display: flex;
+      background: #111;
+      padding: 80px 10%;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      flex-wrap: wrap;
-      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     .testimonial {
       background: #1a1a1a;
-      border-left: 4px solid #ff6600;
+      border-left: 4px solid #ff5500;
       padding: 20px;
-      border-radius: 10px;
-      flex: 1;
-      max-width: 500px;
-      color: #ddd;
-    }
-    .testimonial p {
+      border-radius: 12px;
       font-style: italic;
+      color: #ddd;
     }
     .testimonial span {
       display: block;
       margin-top: 15px;
-      color: #ff6600;
       font-weight: bold;
+      color: #ff5500;
+      text-align: right;
     }
+
+    /* Call-to-Action Form */
+    .cta-form {
+      background: #1a1a1a;
+      padding: 40px;
+      border-radius: 16px;
+      max-width: 500px;
+      margin: 80px auto;
+      text-align: center;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .cta-form h3 { color: #ff5500; margin-bottom: 10px; }
+    .cta-form p { color: #ccc; margin-bottom: 20px; }
+    .cta-form form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .cta-form input {
+      padding: 12px 15px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      flex: 1;
+      min-width: 200px;
+    }
+    .cta-form button {
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      background: #ff5500;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cta-form button:hover { background: #e64a00; }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 40px 20px;
+      padding: 30px;
       background: #111;
-      margin-top: 60px;
-    }
-    footer p {
-      color: #ccc;
+      color: #777;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <!-- Hero -->
   <header>
     <h1>Connection Without Compromise</h1>
-    <p>The first platform where contractors and homeowners win together.</p>
+    <p>TradeScout is the first platform built for both contractors and homeowners — free, fair, and built to end the era of predatory predecessors.</p>
   </header>
 
-  <!-- Coming Soon -->
+  <!-- What's Coming -->
   <section>
-    <h2>What’s Coming</h2>
-    <p class="section-sub">A preview of the TradeScout platform about to launch:</p>
-    <div class="gallery">
-      <div>
-        <img src="assets/images/532563632_637889646022238_1530481818227593628_n.jpg" alt="Homeowner Request Form">
-        <p>Homeowner Request Form</p>
+    <h2>🚀 What’s Coming</h2>
+    <p class="intro">A glimpse of the TradeScout experience:</p>
+
+    <div class="showcase">
+      <div class="card">
+        <img src="assets/images/homeowner-request.jpg" alt="Homeowner Request Form">
+        <div class="card-content">
+          <h3>Homeowner Request Form</h3>
+          <p>Find trusted contractors without spam or endless calls.</p>
+        </div>
       </div>
-      <div>
-        <img src="assets/images/533067349_637887526022450_1623738740692359526_n.jpg" alt="Verified Contractor Profiles">
-        <p>Verified Contractor Profiles</p>
+
+      <div class="card">
+        <img src="assets/images/verified-profiles.jpg" alt="Verified Contractor Profiles">
+        <div class="card-content">
+          <h3>Verified Contractor Profiles</h3>
+          <p>Every contractor is insured, reviewed, and verified.</p>
+        </div>
       </div>
-      <div>
-        <img src="assets/images/533570645_637889732688969_1167757723796489296_n.jpg" alt="Contractor Directory">
-        <p>Contractor Directory</p>
+
+      <div class="card">
+        <img src="assets/images/contractor-directory.jpg" alt="Contractor Directory">
+        <div class="card-content">
+          <h3>Contractor Directory</h3>
+          <p>Discover top-rated pros in your area, fast and free forever.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Testimonials -->
-  <section>
+  <section class="testimonials">
     <h2>What People Are Saying</h2>
-    <div class="testimonials">
+    <div class="testimonial-grid">
       <div class="testimonial">
-        <p>"Finding a contractor has never been this easy. I sent out a request, and within hours I had someone reliable lined up. No spam calls, no nonsense — just honest work done right."</p>
+        "Finding a contractor has never been this easy. One request and I had results in hours. No spam calls — just honest work."
         <span>– Real Homeowner From The Future</span>
       </div>
       <div class="testimonial">
-        <p>"I’ve wasted money on leads for years, but this is different. The homeowners who reach me are serious, and I don’t have to fight against ten other contractors. Finally, something fair."</p>
+        "I’ve wasted money on leads for years, but this is different. Finally, something fair."
         <span>– Real Contractor From The Future</span>
       </div>
     </div>
   </section>
 
+  <!-- Email Form -->
+  <div class="cta-form">
+    <h3>Be the First to Know</h3>
+    <p>Sign up for early access and updates when TradeScout launches in your area.</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Notify Me</button>
+    </form>
+  </div>
+
   <!-- Footer -->
   <footer>
-    <p>© 2025 TradeScout. All rights reserved.</p>
+    &copy; 2025 TradeScout. All rights reserved. | Connection Without Compromise
   </footer>
+
 </body>
 </html>
+
 
 
 
