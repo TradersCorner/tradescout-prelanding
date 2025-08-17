@@ -10,30 +10,48 @@
       font-family: Arial, sans-serif;
       background-color: #0d0d0d;
       color: #f0f0f0;
-    }
-    header {
-      text-align: center;
-      padding: 100px 20px 60px;
-      background: url('assets/hero-bg.jpg') no-repeat center/cover;
-    }
-    header h1 {
-      font-size: 3rem;
-      color: #ff6600;
-      margin-bottom: 15px;
-      text-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
-    }
-    header p {
-      font-size: 1.3rem;
-      color: #ccc;
+      line-height: 1.6;
     }
 
+    /* Hero */
+    header {
+      text-align: center;
+      padding: 120px 20px 100px;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
+                  url('assets/hero-bg.jpg') no-repeat center/cover;
+    }
+    header h1 {
+      font-size: 3.2rem;
+      color: #ff6600;
+      margin-bottom: 15px;
+      text-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+    header .cta-btn {
+      background: #ff6600;
+      color: #fff;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+    header .cta-btn:hover { background: #e65c00; }
+
+    /* Section Titles */
     .section-title {
       text-align: center;
       color: #ff6600;
       font-size: 2rem;
-      margin: 70px 0 25px;
+      margin: 80px 0 30px;
     }
 
+    /* Features Grid */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -56,20 +74,44 @@
     .card img {
       max-width: 100px;
       margin-bottom: 15px;
-      border-radius: 8px;
     }
-    .card h3 {
-      color: #ff6600;
-      margin-bottom: 10px;
+    .card h3 { color: #ff6600; margin-bottom: 10px; }
+    .card p { color: #ccc; font-size: 0.95rem; }
+
+    /* How It Works */
+    .steps {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
-    .card p {
-      color: #ccc;
-      font-size: 0.95rem;
+    .step {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+    .step span {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff;
+      font-size: 1.2rem;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      margin-bottom: 15px;
     }
 
+    /* Form */
     .form-section {
       background: #111;
-      padding: 70px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     .form-section h2 {
@@ -104,10 +146,43 @@
       cursor: pointer;
       transition: background 0.2s ease;
     }
-    button:hover {
-      background: #e65c00;
+    button:hover { background: #e65c00; }
+
+    /* FAQ */
+    .faq {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .faq-item {
+      margin-bottom: 20px;
+    }
+    .faq-item h4 {
+      color: #ff6600;
+      margin-bottom: 8px;
+    }
+    .faq-item p {
+      color: #ccc;
+      font-size: 0.95rem;
     }
 
+    /* Closing CTA */
+    .closing-cta {
+      text-align: center;
+      padding: 80px 20px;
+      background: #1a1a1a;
+    }
+    .closing-cta h2 {
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+    .closing-cta button {
+      background: #ff6600;
+      padding: 16px 32px;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -127,49 +202,38 @@
 </head>
 <body>
 
+  <!-- Hero -->
   <header>
     <h1>TradeScout</h1>
     <p>Join over 500,000 homeowners & contractors across the USA</p>
+    <button class="cta-btn">Get Started</button>
   </header>
 
+  <!-- Why Section -->
   <section>
     <h2 class="section-title">Why TradeScout?</h2>
     <div class="features">
-      <div class="card">
-        <img src="assets/accelerated growth for local trusted contractors" alt="Accelerated Growth">
-        <h3>Accelerated Growth</h3>
-        <p>Local, trusted contractors get the visibility they deserve — without paying for junk leads.</p>
-      </div>
-      <div class="card">
-        <img src="assets/find helpers and employees" alt="Find Helpers">
-        <h3>Find Helpers & Employees</h3>
-        <p>Build your crew faster. Contractors can find reliable helpers, and workers can connect with opportunity.</p>
-      </div>
-      <div class="card">
-        <img src="assets/number one source for number one sources" alt="Number One Source">
-        <h3>Number One Source</h3>
-        <p>The go-to hub for both contractors and homeowners to connect directly — no gatekeepers.</p>
-      </div>
-      <div class="card">
-        <img src="assets/tools and snapshots for homeowners.jpg" alt="Homeowner Tools">
-        <h3>Homeowner Tools</h3>
-        <p>Track projects, request bids, and find verified professionals with confidence.</p>
-      </div>
-      <div class="card">
-        <h3>Verified Contractor Profiles</h3>
-        <p>Every contractor is vetted for insurance, reputation, and work quality.</p>
-      </div>
-      <div class="card">
-        <h3>Contractor Directory</h3>
-        <p>Browse local contractors by trade, reviews, and recommendations.</p>
-      </div>
-      <div class="card">
-        <h3>Growth Tools</h3>
-        <p>Smart tools designed to help contractors expand their reach and homeowners get results.</p>
-      </div>
+      <div class="card"><img src="assets/accelerated-growth.jpg" alt="Accelerated Growth"><h3>Accelerated Growth</h3><p>Local, trusted contractors get visibility without paying for junk leads.</p></div>
+      <div class="card"><img src="assets/find-helpers.jpg" alt="Find Helpers"><h3>Find Helpers & Employees</h3><p>Contractors can find reliable workers, and workers can connect with opportunity.</p></div>
+      <div class="card"><img src="assets/number-one.jpg" alt="Number One"><h3>Number One Source</h3><p>The go-to hub for both contractors and homeowners — no gatekeepers.</p></div>
+      <div class="card"><img src="assets/homeowner-tools.jpg" alt="Homeowner Tools"><h3>Homeowner Tools</h3><p>Track projects, request bids, and find verified pros with confidence.</p></div>
+      <div class="card"><h3>Verified Contractor Profiles</h3><p>Every contractor is vetted for insurance, reputation, and work quality.</p></div>
+      <div class="card"><h3>Contractor Directory</h3><p>Browse local contractors by trade, reviews, and recommendations.</p></div>
+      <div class="card"><h3>Growth Tools</h3><p>Smart tools to help contractors expand reach and homeowners get results.</p></div>
     </div>
   </section>
 
+  <!-- How It Works -->
+  <section>
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+      <div class="step"><span>1</span><h3>Post Your Project</h3><p>Homeowners submit project details once.</p></div>
+      <div class="step"><span>2</span><h3>Get Matched</h3><p>Verified contractors are recommended — no spam calls.</p></div>
+      <div class="step"><span>3</span><h3>Hire With Confidence</h3><p>Work with insured, reviewed, and trusted pros.</p></div>
+    </div>
+  </section>
+
+  <!-- Form -->
   <section class="form-section">
     <h2>Get Started</h2>
     <form action="thank-you.html" method="POST">
@@ -181,6 +245,23 @@
     </form>
   </section>
 
+  <!-- FAQ -->
+  <section>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq">
+      <div class="faq-item"><h4>Does TradeScout cost money?</h4><p>No. Homeowners and contractors can join and connect for free.</p></div>
+      <div class="faq-item"><h4>How do I know contractors are verified?</h4><p>We verify licenses, insurance, and reviews for every contractor profile.</p></div>
+      <div class="faq-item"><h4>Will I get spam calls?</h4><p>No. Your request is private — only verified matches will contact you.</p></div>
+    </div>
+  </section>
+
+  <!-- Closing CTA -->
+  <section class="closing-cta">
+    <h2>Get Started With TradeScout Today</h2>
+    <button>Join Free</button>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 TradeScout. All Rights Reserved.</p>
     <img src="assets/tradescout-logo.png" alt="TradeScout Logo">
@@ -188,3 +269,4 @@
 
 </body>
 </html>
+
