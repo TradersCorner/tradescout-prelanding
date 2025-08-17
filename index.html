@@ -3,268 +3,185 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TradeScout – Connection Without Compromise</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Join 500,000+ homeowners and contractors across the USA. TradeScout connects homeowners with verified contractors for remodeling, roofing, painting, flooring, concrete, plumbing, electrical, siding, and more — without middlemen or predatory lead systems.">
-  <meta name="keywords" content="remodeling, roofing, painting, flooring, concrete, plumbing, electrical, siding, windows, drywall, decks, cabinets, contractors, homeowners, construction directory, home improvement, TradeScout">
-
-  <!-- Styles -->
+  <title>TradeScout – Local Contractors & Homeowners</title>
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      background: #0d0d0d;
+      font-family: Arial, sans-serif;
+      background-color: #0d0d0d;
       color: #f5f5f5;
       line-height: 1.6;
     }
 
     h1, h2, h3 {
       color: #ff6600;
-      margin-bottom: 15px;
+      text-align: center;
     }
 
-    p {
-      color: #ccc;
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(135deg, #111, #000);
     }
 
-    section {
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .form-inline {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .form-inline input, .form-inline button {
+      padding: 12px 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .form-inline input {
+      width: 250px;
+    }
+
+    .form-inline button {
+      background: #ff6600;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-inline button:hover {
+      background: #e65c00;
+    }
+
+    .info-section {
       padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
 
-    /* Hero */
-    header {
-      text-align: center;
-      padding: 100px 20px 60px;
-      background: linear-gradient(135deg, #111, #1a1a1a);
-    }
-    header h1 {
-      font-size: clamp(2rem, 5vw, 3.5rem);
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 15px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .highlight {
-      color: #ff6600;
-      font-weight: bold;
+    .info-section h2 {
+      margin-bottom: 40px;
     }
 
-    /* Bash Competitors */
-    .bash-box {
-      background: #161616;
-      border-left: 5px solid #ff6600;
-      padding: 25px;
-      border-radius: 8px;
-      font-size: 1.2rem;
-      margin-top: 30px;
-      color: #ddd;
-    }
-
-    /* Services */
-    .services {
-      text-align: center;
-    }
-    .service-grid {
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      margin-top: 30px;
-    }
-    .service-card {
-      background: #1c1c1c;
-      padding: 20px;
-      border-radius: 12px;
-      transition: transform 0.3s ease;
-      border: 1px solid #2a2a2a;
-    }
-    .service-card:hover {
-      transform: translateY(-6px);
-      border-color: #ff6600;
-    }
-    .service-card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 15px;
-      background: #222;
-    }
-    .service-card h3 {
-      margin: 10px 0;
-    }
-
-    /* Testimonials */
-    .testimonials {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 20px;
     }
-    .testimonial {
-      background: #161616;
-      padding: 20px;
-      border-radius: 8px;
-      border-left: 5px solid #ff6600;
-      color: #ddd;
-    }
-    .testimonial p:last-child {
-      margin-top: 15px;
-      text-align: right;
-      font-weight: bold;
-      color: #ff6600;
-    }
 
-    /* CTA Banner */
-    .cta-banner {
-      background: linear-gradient(135deg, #ff6600, #cc5200);
-      text-align: center;
-      padding: 40px 20px;
+    .card {
+      background: #1a1a1a;
+      padding: 20px;
       border-radius: 12px;
-      color: #fff;
-      font-size: 1.4rem;
-      font-weight: bold;
-    }
-
-    /* Email Signup */
-    form {
       text-align: center;
-      margin-top: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
-    input[type="email"], input[type="text"] {
-      padding: 12px;
-      margin: 10px;
-      width: 260px;
-      border: none;
-      border-radius: 6px;
-      outline: none;
-    }
-    button {
-      padding: 12px 28px;
-      background: #ff6600;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-      transition: 0.3s;
-    }
-    button:hover { background: #e65c00; }
 
-    /* Footer */
-    footer {
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      max-width: 100px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #ff6600, #cc3300);
+      text-align: center;
+      padding: 50px 20px;
+      color: white;
+      border-radius: 12px;
+      max-width: 900px;
+      margin: 60px auto;
+    }
+
+    .footer {
       text-align: center;
       padding: 20px;
-      background: #0a0a0a;
-      color: #777;
+      background: #111;
+      color: #888;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
-  <header>
-    <h1>Connection Without Compromise</h1>
-    <p>Join <span class="highlight">500,000+ homeowners and contractors</span> across the USA. 
-       TradeScout connects <span class="highlight">homeowners</span> with 
-       <span class="highlight">verified contractors</span> — no middlemen, no lead resellers, no nonsense.</p>
-  </header>
-
-  <!-- Bash Competitors -->
-  <section>
-    <div class="bash-box">
-      Old lead generators were nothing but <strong>predatory predecessors</strong> — selling homeowner data, 
-      overcharging contractors, and leaving both sides frustrated.  
-      <span class="highlight">That era is dead.</span>  
-      TradeScout is the future: direct, local, and uncompromised.
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="services">
-    <h2>Explore Our Core Services</h2>
-    <p>Everything from remodeling to roofing — and everything in between.</p>
-    <div class="service-grid">
-      <div class="service-card">
-        <img src="assets/images/remodeling.jpg" alt="Remodeling">
-        <h3>Remodeling</h3>
-        <p>From kitchens to full home renovations.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/images/painting.jpg" alt="Painting">
-        <h3>Painting</h3>
-        <p>Interior, exterior, residential, and commercial.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/images/roofing.jpg" alt="Roofing">
-        <h3>Roofing</h3>
-        <p>Protect your home with trusted professionals.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/images/flooring.jpg" alt="Flooring">
-        <h3>Flooring</h3>
-        <p>Tile, hardwood, carpet, vinyl, and more.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/images/plumbing.jpg" alt="Plumbing">
-        <h3>Plumbing</h3>
-        <p>Licensed plumbers for every project.</p>
-      </div>
-      <div class="service-card">
-        <img src="assets/images/electrical.jpg" alt="Electrical">
-        <h3>Electrical</h3>
-        <p>Safe, reliable, and code-compliant work.</p>
-      </div>
-      <!-- Add more cards as needed -->
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section>
-    <h2 style="text-align:center;">What People Are Saying</h2>
-    <div class="testimonials">
-      <div class="testimonial">
-        <p>"Finding a contractor has never been this easy. I posted a request and had someone reliable lined up in hours. No spam calls, no games."</p>
-        <p>– Real Homeowner From The Future</p>
-      </div>
-      <div class="testimonial">
-        <p>"Finally, a fair system. I don’t waste money competing against ten other contractors. Homeowners come directly, and jobs actually close."</p>
-        <p>– Real Contractor From The Future</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Banner -->
-  <section>
-    <div class="cta-banner">
-      Join 500,000+ homeowners & contractors who already trust TradeScout.  
-      Be part of the future of home improvement.
-    </div>
-  </section>
-
-  <!-- Email Signup -->
-  <section>
-    <h2 style="text-align:center;">Get Early Access</h2>
-    <p style="text-align:center;">Sign up today and we’ll notify you the moment we go live.</p>
-    <form action="https://formspree.io/f/xovlzjlq" method="POST">
+  <!-- HERO -->
+  <section class="hero">
+    <h1>TradeScout</h1>
+    <p>Join over 500,000 homeowners & contractors across the USA</p>
+    <form class="form-inline" action="thank-you.html" method="POST">
       <input type="email" name="email" placeholder="Your Email (required)" required>
       <input type="text" name="name" placeholder="Your Name (optional)">
-      <input type="text" name="location" placeholder="Your City (optional)">
+      <input type="text" name="city" placeholder="Your City (optional)">
       <button type="submit">Notify Me</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 TradeScout. All rights reserved.</p>
-    <p>Helping homeowners and contractors connect without compromise.</p>
+  <!-- WHY TRADESCOUT (from your image files) -->
+  <section class="info-section">
+    <h2>Why TradeScout?</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="assets/images/accelerated growth for local trusted contractors.jpg" alt="Accelerated Growth">
+        <h3>Accelerated Growth</h3>
+        <p>Local, trusted contractors get the visibility they deserve — without paying for junk leads.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/find helpers and employees.jpg" alt="Find Helpers and Employees">
+        <h3>Find Helpers & Employees</h3>
+        <p>Build your crew faster. Contractors can find reliable helpers, and workers can connect with opportunity.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/number one source for number one sources.jpg" alt="Number One Source">
+        <h3>Number One Source</h3>
+        <p>The go-to hub for both contractors and homeowners to connect directly — no gatekeepers.</p>
+      </div>
+      <div class="card">
+        <img src="assets/images/tools and snapshots for homeowners.jpg" alt="Homeowner Tools">
+        <h3>Homeowner Tools</h3>
+        <p>Track projects, request bids, and find verified professionals with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Be Part of the Future of Home Improvement</h2>
+    <p>Join 500,000+ homeowners & contractors who already trust TradeScout.</p>
+    <form class="form-inline" action="thank-you.html" method="POST">
+      <input type="email" name="email" placeholder="Your Email (required)" required>
+      <input type="text" name="name" placeholder="Your Name (optional)">
+      <input type="text" name="city" placeholder="Your City (optional)">
+      <button type="submit">Get Early Access</button>
+    </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 TradeScout. All rights reserved.
   </footer>
 
 </body>
 </html>
+
 
 
