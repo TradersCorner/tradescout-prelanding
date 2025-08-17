@@ -4,44 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TradeScout – Connection Without Compromise</title>
-
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       background: #0d0d0d url('assets/images/bg-grid.png');
       background-size: cover;
-      background-attachment: fixed;
-      color: #f0f0f0;
-      overflow-x: hidden;
+      color: #e0e0e0;
+      line-height: 1.6;
     }
+
     h1, h2 {
+      font-weight: 700;
+      margin: 0 0 20px;
       color: #ff6600;
-      margin-bottom: 15px;
-      text-shadow: 0 0 12px rgba(255, 102, 0, 0.7);
     }
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; }
+    section { padding: 70px 20px; max-width: 1200px; margin: auto; }
 
     /* Hero */
     header {
       text-align: center;
-      padding: 120px 20px;
-      position: relative;
-      overflow: hidden;
+      padding: 120px 20px 80px;
     }
     header h1 {
       font-size: clamp(2.5rem, 6vw, 4rem);
-      animation: glowPulse 2s infinite alternate;
-    }
-    @keyframes glowPulse {
-      from { text-shadow: 0 0 8px #ff6600; }
-      to { text-shadow: 0 0 24px #ff3300, 0 0 48px rgba(255,102,0,0.5); }
     }
     header p {
-      font-size: 1.3rem;
-      max-width: 800px;
-      margin: 20px auto;
-      color: #ccc;
+      font-size: 1.2rem;
+      max-width: 750px;
+      margin: 15px auto 0;
+      color: #aaa;
     }
 
     /* Gallery */
@@ -49,83 +41,83 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
+      margin-top: 40px;
     }
-    .gallery-item {
-      background: #141414;
+    .card {
+      background: rgba(20,20,20,0.9);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 20px rgba(255,102,0,0.2);
-      transform: translateY(0);
-      transition: transform 0.3s, box-shadow 0.3s;
-      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
-    .gallery-item:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow: 0 0 40px rgba(255,102,0,0.6);
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.8);
     }
-    .gallery-item img {
-      width: 100%;
-      display: block;
-    }
-    .gallery-item p {
-      background: #111;
-      padding: 15px;
+    .card img { width: 100%; display: block; }
+    .card p {
       margin: 0;
+      padding: 18px;
+      font-weight: 600;
+      font-size: 1.05rem;
       color: #ff6600;
-      font-weight: bold;
+      border-top: 1px solid #222;
+      background: #141414;
     }
 
     /* Testimonials */
-    .testimonial {
-      background: #141414;
-      border-left: 4px solid #ff6600;
-      padding: 25px;
-      border-radius: 10px;
-      margin: 20px 0;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
-    .testimonial.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .testimonial {
+      background: rgba(20,20,20,0.9);
+      border-radius: 12px;
+      padding: 25px;
+      font-size: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+    .testimonial p:last-child {
+      margin-top: 15px;
+      font-weight: 600;
+      color: #ff6600;
+      text-align: right;
     }
 
-    /* Email signup */
-    form {
-      text-align: center;
-      margin-top: 30px;
-    }
+    /* Email form */
+    form { text-align: center; margin-top: 30px; }
     input[type="email"] {
       padding: 14px;
       width: 70%;
       max-width: 350px;
       border-radius: 6px;
-      border: none;
+      border: 1px solid #333;
+      background: #111;
+      color: #fff;
+      margin-bottom: 12px;
     }
     button {
-      margin-top: 10px;
       padding: 14px 28px;
       border: none;
       border-radius: 6px;
       background: #ff6600;
       color: #fff;
-      font-size: 1.1rem;
+      font-size: 1.05rem;
+      font-weight: bold;
       cursor: pointer;
-      animation: pulse 1.5s infinite;
+      transition: background 0.3s;
     }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 10px rgba(255,102,0,0.5); }
-      100% { box-shadow: 0 0 30px rgba(255,102,0,1); }
-    }
+    button:hover { background: #e65500; }
 
-    /* Footer */
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 25px;
       font-size: 0.9rem;
       color: #777;
-      background: #0d0d0d;
+      background: #0b0b0b;
+      margin-top: 40px;
     }
   </style>
 </head>
@@ -134,25 +126,23 @@
   <!-- Hero -->
   <header>
     <h1>Connection Without Compromise</h1>
-    <p>The modern standard in <span class="highlight">home improvement</span> connections. 
-       TradeScout unites <span class="highlight">homeowners</span> and 
-       <span class="highlight">verified contractors</span> without middlemen or outdated lead traps.</p>
+    <p>The modern standard in home improvement connections. TradeScout unites homeowners and verified contractors — no middlemen, no overpriced leads, no nonsense.</p>
   </header>
 
-  <!-- Gallery -->
-  <section id="whats-coming">
+  <!-- What’s Coming -->
+  <section>
     <h2 style="text-align:center;">What’s Coming</h2>
-    <p style="text-align:center;">Preview of the platform launching soon:</p>
+    <p style="text-align:center;">A preview of the TradeScout platform that’s about to launch:</p>
     <div class="gallery">
-      <div class="gallery-item">
+      <div class="card">
         <img src="assets/images/532563632_637889646022238_1530481818227593628_n.jpg" alt="Homeowner Request Form">
         <p>Homeowner Request Form</p>
       </div>
-      <div class="gallery-item">
+      <div class="card">
         <img src="assets/images/533067349_637887526022450_1623738740692359526_n.jpg" alt="Verified Contractor Profiles">
         <p>Verified Contractor Profiles</p>
       </div>
-      <div class="gallery-item">
+      <div class="card">
         <img src="assets/images/533570645_637889732688896_860031139042981396_n.jpg" alt="Contractor Directory">
         <p>Contractor Directory</p>
       </div>
@@ -162,8 +152,16 @@
   <!-- Testimonials -->
   <section>
     <h2 style="text-align:center;">What People Are Saying</h2>
-    <div class="testimonial">"Finding a contractor has never been this easy. No spam calls, no nonsense — just honest work done right." <br><b>– Homeowner</b></div>
-    <div class="testimonial">"I’ve wasted money on leads for years, but this is different. Finally, something fair." <br><b>– Contractor</b></div>
+    <div class="testimonials">
+      <div class="testimonial">
+        <p>"Finding a contractor has never been this easy. I sent out a request and had someone lined up in hours — no spam calls, just honest work."</p>
+        <p>– Homeowner</p>
+      </div>
+      <div class="testimonial">
+        <p>"I’ve wasted money on leads for years, but this is different. The homeowners are serious and I don’t compete with 10 others. Finally, something fair."</p>
+        <p>– Contractor</p>
+      </div>
+    </div>
   </section>
 
   <!-- Signup -->
@@ -182,18 +180,6 @@
     <p>&copy; 2025 TradeScout. All rights reserved.</p>
   </footer>
 
-  <script>
-    // Fade-in testimonials on scroll
-    const testimonials = document.querySelectorAll('.testimonial');
-    window.addEventListener('scroll', () => {
-      testimonials.forEach(t => {
-        const rect = t.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          t.classList.add('visible');
-        }
-      });
-    });
-  </script>
 </body>
 </html>
 
