@@ -5,158 +5,155 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TradeScout – Connection Without Compromise</title>
   <style>
-    /* Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-    body { background: #0d0d0d; color: #fff; line-height: 1.6; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d0d0d;
+      color: #f2f2f2;
+      line-height: 1.6;
+    }
 
     header {
-      padding: 80px 10%;
       text-align: center;
+      padding: 5rem 2rem;
       background: linear-gradient(180deg, #111, #0d0d0d);
     }
     header h1 {
       font-size: 2.8rem;
+      font-weight: bold;
       color: #ff5500;
-      margin-bottom: 20px;
+      margin-bottom: 1rem;
     }
     header p {
-      color: #ccc;
       font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+      color: #ccc;
     }
 
-    /* Section Headings */
-    section h2 {
-      font-size: 2rem;
+    section {
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
       color: #ff5500;
-      margin-bottom: 10px;
-      text-align: center;
+      margin-bottom: 0.5rem;
     }
-    section .intro {
+    .intro {
       text-align: center;
-      color: #ddd;
-      margin-bottom: 40px;
+      margin-bottom: 2rem;
+      color: #ccc;
     }
 
-    /* Showcase Grid */
+    /* Showcase grid */
     .showcase {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin: 0 auto 80px;
-      max-width: 1200px;
-      padding: 0 10%;
+      gap: 2rem;
     }
     .card {
       background: #1a1a1a;
-      border-radius: 16px;
+      border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+      transition: transform 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-10px) scale(1.02);
-      box-shadow: 0 12px 30px rgba(255, 85, 0, 0.3);
+      transform: translateY(-6px);
     }
     .card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
       display: block;
     }
-    .card-content { padding: 20px; text-align: center; }
-    .card-content h3 { color: #ff5500; margin-bottom: 10px; font-size: 1.4rem; }
-    .card-content p { color: #bbb; font-size: 0.95rem; }
+    .card-content {
+      padding: 1.2rem;
+    }
+    .card-content h3 {
+      color: #ff5500;
+      margin-bottom: 0.5rem;
+    }
+    .card-content p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
 
     /* Testimonials */
     .testimonials {
-      background: #111;
-      padding: 80px 10%;
-    }
-    .testimonial-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 0 auto;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
     .testimonial {
       background: #1a1a1a;
+      padding: 1.5rem;
       border-left: 4px solid #ff5500;
-      padding: 20px;
-      border-radius: 12px;
+      border-radius: 8px;
       font-style: italic;
-      color: #ddd;
     }
-    .testimonial span {
+    .testimonial strong {
       display: block;
-      margin-top: 15px;
-      font-weight: bold;
+      margin-top: 1rem;
       color: #ff5500;
-      text-align: right;
+      font-style: normal;
     }
 
-    /* Call-to-Action Form */
-    .cta-form {
-      background: #1a1a1a;
-      padding: 40px;
-      border-radius: 16px;
-      max-width: 500px;
-      margin: 80px auto;
+    /* Email form */
+    .email-signup {
       text-align: center;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+      margin-top: 3rem;
+      background: #1a1a1a;
+      padding: 2rem;
+      border-radius: 10px;
     }
-    .cta-form h3 { color: #ff5500; margin-bottom: 10px; }
-    .cta-form p { color: #ccc; margin-bottom: 20px; }
-    .cta-form form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
-    .cta-form input {
-      padding: 12px 15px;
-      border-radius: 8px;
+    .email-signup input[type="email"] {
+      padding: 0.8rem;
+      width: 60%;
+      max-width: 400px;
       border: none;
-      outline: none;
-      flex: 1;
-      min-width: 200px;
+      border-radius: 6px;
+      margin-right: 0.5rem;
     }
-    .cta-form button {
-      padding: 12px 20px;
-      border-radius: 8px;
-      border: none;
+    .email-signup button {
+      padding: 0.8rem 1.5rem;
       background: #ff5500;
       color: #fff;
-      font-weight: bold;
+      border: none;
+      border-radius: 6px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    .cta-form button:hover { background: #e64a00; }
+    .email-signup button:hover {
+      background: #ff3300;
+    }
 
-    /* Footer */
     footer {
       text-align: center;
-      padding: 30px;
-      background: #111;
+      padding: 1.5rem;
       color: #777;
       font-size: 0.9rem;
+      margin-top: 3rem;
+      border-top: 1px solid #222;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
   <header>
     <h1>Connection Without Compromise</h1>
-    <p>TradeScout is the first platform built for both contractors and homeowners — free, fair, and built to end the era of predatory predecessors.</p>
+    <p>The first truly free platform for contractors & homeowners. No leads. No spam. Just results.</p>
   </header>
 
-  <!-- What's Coming -->
   <section>
     <h2>🚀 What’s Coming</h2>
     <p class="intro">A glimpse of the TradeScout experience:</p>
 
     <div class="showcase">
       <div class="card">
-        <img src="assets/images/homeowner-request.jpg" alt="Homeowner Request Form">
+        <img src="assets/images/homeowner-request.png" alt="Homeowner Request Form">
         <div class="card-content">
           <h3>Homeowner Request Form</h3>
           <p>Find trusted contractors without spam or endless calls.</p>
@@ -164,7 +161,7 @@
       </div>
 
       <div class="card">
-        <img src="assets/images/verified-profiles.jpg" alt="Verified Contractor Profiles">
+        <img src="assets/images/verified-profiles.png" alt="Verified Contractor Profiles">
         <div class="card-content">
           <h3>Verified Contractor Profiles</h3>
           <p>Every contractor is insured, reviewed, and verified.</p>
@@ -172,7 +169,7 @@
       </div>
 
       <div class="card">
-        <img src="assets/images/contractor-directory.jpg" alt="Contractor Directory">
+        <img src="assets/images/contractor-directory.png" alt="Contractor Directory">
         <div class="card-content">
           <h3>Contractor Directory</h3>
           <p>Discover top-rated pros in your area, fast and free forever.</p>
@@ -181,39 +178,35 @@
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="testimonials">
+  <section>
     <h2>What People Are Saying</h2>
-    <div class="testimonial-grid">
+    <div class="testimonials">
       <div class="testimonial">
-        "Finding a contractor has never been this easy. One request and I had results in hours. No spam calls — just honest work."
-        <span>– Real Homeowner From The Future</span>
+        "Finding a contractor has never been this easy. I sent out a request, and within hours I had someone reliable lined up. No spam calls, no nonsense — just honest work done right."
+        <strong>– Real Homeowner From The Future</strong>
       </div>
       <div class="testimonial">
-        "I’ve wasted money on leads for years, but this is different. Finally, something fair."
-        <span>– Real Contractor From The Future</span>
+        "I’ve wasted money on leads for years, but this is different. The homeowners who reach me are serious, and I don’t have to fight against ten other contractors. Finally, something fair."
+        <strong>– Real Contractor From The Future</strong>
       </div>
     </div>
   </section>
 
-  <!-- Email Form -->
-  <div class="cta-form">
-    <h3>Be the First to Know</h3>
-    <p>Sign up for early access and updates when TradeScout launches in your area.</p>
+  <section class="email-signup">
+    <h2>📩 Stay Updated</h2>
+    <p>Be the first to know when TradeScout launches:</p>
     <form>
       <input type="email" placeholder="Enter your email" required>
       <button type="submit">Notify Me</button>
     </form>
-  </div>
+  </section>
 
-  <!-- Footer -->
   <footer>
-    &copy; 2025 TradeScout. All rights reserved. | Connection Without Compromise
+    &copy; 2025 TradeScout. All rights reserved.
   </footer>
 
 </body>
 </html>
-
 
 
 
