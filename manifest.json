@@ -5,7 +5,21 @@
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#FF6600",
-  "description": "Connection Without Compromise",
+  "description": "TradeScout: Connection Without Compromise. The modern way for homeowners and contractors to connect for remodeling, roofing, painting, flooring, concrete, plumbing, electrical, siding, windows, and more.",
+  "categories": [
+    "construction",
+    "remodeling",
+    "painting",
+    "roofing",
+    "flooring",
+    "concrete",
+    "plumbing",
+    "electrical",
+    "siding",
+    "windows",
+    "drywall",
+    "decks"
+  ],
   "icons": [
     {
       "src": "/assets/icon-192.png",
@@ -19,4 +33,3 @@
     }
   ]
 }
-
