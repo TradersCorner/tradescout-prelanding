@@ -13,16 +13,17 @@
     }
     header {
       text-align: center;
-      padding: 80px 20px 40px;
-      background: linear-gradient(180deg, #111, #0d0d0d);
+      padding: 100px 20px 60px;
+      background: url('assets/hero-bg.jpg') no-repeat center/cover;
     }
     header h1 {
       font-size: 3rem;
       color: #ff6600;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      text-shadow: 0 0 15px rgba(255, 102, 0, 0.6);
     }
     header p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       color: #ccc;
     }
 
@@ -30,12 +31,13 @@
       text-align: center;
       color: #ff6600;
       font-size: 2rem;
-      margin: 60px 0 20px;
+      margin: 70px 0 25px;
     }
+
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 20px;
@@ -43,17 +45,18 @@
     .card {
       background: #1a1a1a;
       border-radius: 12px;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 0 20px rgba(255, 102, 0, 0.6);
+      box-shadow: 0 0 25px rgba(255, 102, 0, 0.6);
     }
     .card img {
-      max-width: 80px;
+      max-width: 100px;
       margin-bottom: 15px;
+      border-radius: 8px;
     }
     .card h3 {
       color: #ff6600;
@@ -66,7 +69,7 @@
 
     .form-section {
       background: #111;
-      padding: 60px 20px;
+      padding: 70px 20px;
       text-align: center;
     }
     .form-section h2 {
@@ -107,10 +110,18 @@
 
     footer {
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
       background: #0a0a0a;
       color: #666;
       font-size: 0.9rem;
+      position: relative;
+    }
+    footer img {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      width: 60px;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -125,22 +136,22 @@
     <h2 class="section-title">Why TradeScout?</h2>
     <div class="features">
       <div class="card">
-        <img src="assets/images/accelerated growth for local trusted contractors.jpg" alt="Accelerated Growth">
+        <img src="assets/accelerated growth for local trusted contractors" alt="Accelerated Growth">
         <h3>Accelerated Growth</h3>
         <p>Local, trusted contractors get the visibility they deserve — without paying for junk leads.</p>
       </div>
       <div class="card">
-        <img src="assets/images/find helpers and employees.jpg" alt="Find Helpers & Employees">
+        <img src="assets/find helpers and employees" alt="Find Helpers">
         <h3>Find Helpers & Employees</h3>
         <p>Build your crew faster. Contractors can find reliable helpers, and workers can connect with opportunity.</p>
       </div>
       <div class="card">
-        <img src="assets/images/number one source for number one sources.jpg" alt="Number One Source">
+        <img src="assets/number one source for number one sources" alt="Number One Source">
         <h3>Number One Source</h3>
         <p>The go-to hub for both contractors and homeowners to connect directly — no gatekeepers.</p>
       </div>
       <div class="card">
-        <img src="assets/images/tools and snapshots for homeowners.jpg" alt="Homeowner Tools">
+        <img src="assets/tools and snapshots for homeowners.jpg" alt="Homeowner Tools">
         <h3>Homeowner Tools</h3>
         <p>Track projects, request bids, and find verified professionals with confidence.</p>
       </div>
@@ -172,8 +183,8 @@
 
   <footer>
     <p>&copy; 2025 TradeScout. All Rights Reserved.</p>
+    <img src="assets/tradescout-logo.png" alt="TradeScout Logo">
   </footer>
 
 </body>
 </html>
-
