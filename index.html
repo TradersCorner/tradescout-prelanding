@@ -62,48 +62,35 @@
       border-radius: 6px;
     }
 
-    /* What’s Coming */
-    #whats-coming {
-      text-align: center;
-      padding: 60px 20px;
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 20px;
     }
-    #whats-coming h2 {
-      color: #ff6600;
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-    #whats-coming p {
-      color: #ccc;
-      margin-bottom: 30px;
-    }
-    #whats-coming .image-grid {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
-    #whats-coming .image-box {
+    .gallery-item {
       background: #1a1a1a;
-      border-radius: 12px;
-      padding: 12px;
-      max-width: 300px;
+      border-radius: 10px;
+      padding: 15px;
       text-align: center;
-      box-shadow: 0 0 15px rgba(255, 102, 0, 0.4);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 2px solid #222;
+      box-shadow: 0 0 15px rgba(255, 102, 0, 0.2);
+      transition: transform 0.2s ease-in-out;
     }
-    #whats-coming .image-box:hover {
+    .gallery-item:hover {
       transform: translateY(-5px);
-      box-shadow: 0 0 20px rgba(255, 102, 0, 0.7);
+      box-shadow: 0 0 20px rgba(255, 102, 0, 0.4);
     }
-    #whats-coming img {
+    .gallery-item img {
       width: 100%;
       border-radius: 8px;
+      background: #222;
     }
-    #whats-coming .image-box p {
+    .gallery-item p {
       margin-top: 10px;
-      font-size: 15px;
-      color: #ff6600;
       font-weight: bold;
+      color: #ff6600;
     }
 
     /* Testimonials */
@@ -184,21 +171,17 @@
     </div>
   </section>
 
-  <!-- What’s Coming -->
+  <!-- Gallery -->
   <section id="whats-coming">
-    <h2>What’s Coming</h2>
-    <p>A preview of the TradeScout platform that’s about to launch:</p>
+    <h2 style="text-align:center;">What’s Coming</h2>
+    <p style="text-align:center;">A preview of the TradeScout platform that’s about to launch:</p>
     
-    <div class="image-grid">
-      <div class="image-box">
-        <img src="assets/images/518360109_637889676022235_9100352886396500626_n.jpg" alt="TradeScout contractor directory screenshot">
-        <p>Contractor Directory</p>
-      </div>
-      <div class="image-box">
+    <div class="gallery">
+      <div class="gallery-item">
         <img src="assets/images/532563632_637889646022238_1530481818227593628_n.jpg" alt="TradeScout homeowner request form screenshot">
         <p>Homeowner Request Form</p>
       </div>
-      <div class="image-box">
+      <div class="gallery-item">
         <img src="assets/images/533067349_637887526022450_1623738740692359526_n.jpg" alt="TradeScout verified contractor profile screenshot">
         <p>Verified Contractor Profiles</p>
       </div>
@@ -209,10 +192,13 @@
   <section>
     <h2 style="text-align:center;">What People Are Saying</h2>
     <div class="testimonials">
+      <!-- Homeowner Review -->
       <div class="testimonial">
         <p>"Finding a contractor has never been this easy. I sent out a request, and within hours I had someone reliable lined up. No spam calls, no nonsense — just honest work done right."</p>
         <p>– Real User From The Future</p>
       </div>
+
+      <!-- Contractor Review -->
       <div class="testimonial">
         <p>"I’ve wasted money on leads for years, but this is different. The homeowners who reach me are serious, and I don’t have to fight against ten other contractors. Finally, something fair."</p>
         <p>– Real User From The Future</p>
@@ -242,5 +228,6 @@
 
 </body>
 </html>
+
 
 
