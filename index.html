@@ -12,6 +12,7 @@
       background-color: #0d0d0d;
       color: #f5f5f5;
       line-height: 1.6;
+      scroll-behavior: smooth;
     }
 
     h1, h2, h3 {
@@ -35,32 +36,19 @@
       margin-bottom: 30px;
     }
 
-    .form-inline {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .form-inline input, .form-inline button {
-      padding: 12px 15px;
-      border-radius: 6px;
-      border: none;
-      font-size: 1rem;
-    }
-
-    .form-inline input {
-      width: 250px;
-    }
-
-    .form-inline button {
+    .hero .cta-btn {
       background: #ff6600;
       color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      border-radius: 6px;
       cursor: pointer;
       transition: background 0.3s ease;
     }
 
-    .form-inline button:hover {
+    .hero .cta-btn:hover {
       background: #e65c00;
     }
 
@@ -113,6 +101,38 @@
       margin: 60px auto;
     }
 
+    .form-inline {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .form-inline input, .form-inline button {
+      padding: 12px 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1rem;
+    }
+
+    .form-inline input {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .form-inline button {
+      background: #222;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .form-inline button:hover {
+      background: #000;
+    }
+
     .footer {
       text-align: center;
       padding: 20px;
@@ -128,15 +148,12 @@
   <section class="hero">
     <h1>TradeScout</h1>
     <p>Join over 500,000 homeowners & contractors across the USA</p>
-    <form class="form-inline" action="thank-you.html" method="POST">
-      <input type="email" name="email" placeholder="Your Email (required)" required>
-      <input type="text" name="name" placeholder="Your Name (optional)">
-      <input type="text" name="city" placeholder="Your City (optional)">
-      <button type="submit">Notify Me</button>
-    </form>
+    <button class="cta-btn" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth'});">
+      Sign Up for Launch
+    </button>
   </section>
 
-  <!-- WHY TRADESCOUT (from your image files) -->
+  <!-- WHY TRADESCOUT -->
   <section class="info-section">
     <h2>Why TradeScout?</h2>
     <div class="grid">
@@ -163,8 +180,8 @@
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="cta">
+  <!-- CTA + SIGNUP -->
+  <section class="cta" id="signup">
     <h2>Be Part of the Future of Home Improvement</h2>
     <p>Join 500,000+ homeowners & contractors who already trust TradeScout.</p>
     <form class="form-inline" action="thank-you.html" method="POST">
