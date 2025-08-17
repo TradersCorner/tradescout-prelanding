@@ -1,357 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--
-    TradeScout Landing – Dark Version (accuracy-focused)
-
-    IMAGE PATHS (EDIT HERE)
-    If your image file names differ, change ONLY the right-hand side values below.
-    Keep %20 for spaces (URL encoding).
-      - acceleratedGrowthImg  ->   assets/images/accelerated%20growth%20for%20local%20trusted%20contractors.jpg
-      - findHelpersImg        ->   assets/images/find%20helpers%20and%20employees.jpg
-      - numberOneSrcImg       ->   assets/images/number%20one%20source%20for%20number%20one%20sources.jpg
-      - homeownerToolsImg     ->   assets/images/tools%20and%20snapshots%20for%20homeowners.jpg
-  -->
-
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TradeScout – Connection Without Compromise</title>
-  <meta name="description" content="TradeScout connects homeowners with verified contractors—without lead-selling, spam, or middlemen. Join 500,000+ homeowners & contractors across the USA." />
-  <meta name="theme-color" content="#0b0b0b" />
+  <title>TradeScout — Connection Without Compromise</title>
+  <meta name="description" content="TradeScout connects homeowners and verified contractors directly—no gatekeepers, no spam. Get early access." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="TradeScout – Connection Without Compromise" />
-  <meta property="og:description" content="The first truly free platform for homeowners & contractors. No lead-selling, no spam, no middlemen." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://info.thetradescout.us/" />
-
-  <!-- Favicons / PWA -->
-  <link rel="manifest" href="manifest.json" />
-  <link rel="icon" href="assets/images/icon-192.png" type="image/png" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
     :root{
-      --bg: #0b0b0b;
-      --panel: #121212;
-      --panel-2: #161616;
-      --card: #171717;
-      --text: #efefef;
-      --muted: #b9b9b9;
-      --brand: #ff6a00;
-      --brand-2: #d84d00;
-      --ring: rgba(255,106,0,.35);
-      --shadow: 0 8px 20px rgba(0,0,0,.45), 0 1px 0 rgba(255,255,255,.04) inset;
-      --radius: 14px;
-      --radius-sm: 10px;
-      --maxw: 1160px;
+      --bg:#0e0e0f;
+      --panel:#141416;
+      --panel-2:#17181a;
+      --muted:#9aa0a6;
+      --text:#f7f7f8;
+      --brand:#ff6a00;
+      --brand-2:#e55900;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+      --ring:0 0 0 3px rgba(255,106,0,.25);
     }
     *{box-sizing:border-box}
-    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,'Helvetica Neue',Arial,sans-serif}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:radial-gradient(1200px 600px at 50% -200px, #17181a 0%, transparent 60%) , var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
     a{color:inherit;text-decoration:none}
     img{max-width:100%;display:block}
-    .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:22px}
-    .section{padding:56px 0}
-    @media(min-width:900px){.section{padding:78px 0}}
-    .center{text-align:center}
 
-    /* Hero */
-    .hero{padding:84px 0 36px}
-    .hero h1{
-      font-size: clamp(32px, 5.2vw, 58px);
-      line-height:1.1;
-      letter-spacing:.2px;
-      margin:0 0 10px;
-      text-align:center;
+    /* Layout */
+    .container{width:min(1120px,92vw);margin-inline:auto}
+    .stack-32>*+*{margin-top:32px}
+    .stack-48>*+*{margin-top:48px}
+    .stack-64>*+*{margin-top:64px}
+    .stack-96>*+*{margin-top:96px}
+
+    /* Header / CTA */
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter: blur(10px);
+      background:rgba(14,14,15,.7);
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .hero p{
-      margin:0 auto 26px;
-      color:var(--muted);
-      text-align:center;
-      max-width:840px;
-      font-size:clamp(16px, 1.8vw, 18px);
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:14px 0;
+    }
+    .brand{
+      font-weight:800;letter-spacing:.2px;font-size:22px;
+      color:#fff;
     }
     .cta{
       display:inline-flex;align-items:center;gap:10px;
-      background:linear-gradient(180deg,var(--brand),var(--brand-2));
-      color:#fff;
-      padding:14px 20px;
-      border-radius:12px;
-      border:none;
-      box-shadow: var(--shadow);
-      font-weight:700;
-      letter-spacing:.3px;
-      cursor:pointer;
-      transition: transform .08s ease, filter .08s ease;
-    }
-    .cta:hover{filter:brightness(1.05)}
-    .cta:active{transform:translateY(1px)}
-    .cta .icon{font-size:18px}
-
-    /* Cred band */
-    .band{
       background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff;
-      border-radius:16px;
-      padding:18px 18px;
-      margin:28px auto 0;
-      box-shadow:var(--shadow);
+      color:#fff;padding:12px 18px;border-radius:999px;
+      font-weight:700;border:none;cursor:pointer;
+      box-shadow:0 8px 20px rgba(255,106,0,.20);
+      transition:transform .12s ease, box-shadow .2s ease;
+    }
+    .cta:hover{transform:translateY(-1px)}
+    .cta:active{transform:translateY(0)}
+    .cta svg{opacity:.9}
+
+    /* Hero */
+    .hero{
+      padding:72px 0 32px;
       text-align:center;
-      max-width:980px;
-      font-weight:700;
+    }
+    .hero h1{
+      margin:0 0 16px;
+      font-size:clamp(32px,3.4vw,48px);
+      line-height:1.1;
+      font-weight:900;
       letter-spacing:.2px;
     }
+    .hero p{
+      margin:0 auto;
+      color:var(--muted);
+      max-width:780px;
+      font-size:clamp(16px,1.9vw,18px);
+    }
+    .hero .cta-wrap{margin-top:28px}
 
-    /* Why section */
-    .why h2{
-      font-size: clamp(22px, 3vw, 28px);
-      margin:0 0 24px;
-      letter-spacing:.4px;
+    /* Feature grid */
+    .section-title{
+      font-size:22px;font-weight:800;letter-spacing:.2px;margin:0 0 22px;
     }
-    .grid{
+    .feature-grid{
       display:grid;gap:18px;
-      grid-template-columns:repeat(1,minmax(0,1fr));
+      grid-template-columns:repeat(12,1fr);
     }
-    @media(min-width:720px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-    @media(min-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
     .card{
-      background:linear-gradient(180deg,var(--card),#141414);
-      border:1px solid #1e1e1e;
+      grid-column:span 12;
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.06);
       border-radius:var(--radius);
       box-shadow:var(--shadow);
-      padding:18px;
-      display:flex;flex-direction:column;gap:14px;min-height:100%;
-    }
-    .card-hero{
-      background: #0e0e0e;
-      border-radius:12px;
-      aspect-ratio: 16/9;
-      border:1px solid #1c1c1c;
-      display:flex;align-items:center;justify-content:center;
       overflow:hidden;
     }
-    .card-hero img{
-      width:100%;height:100%;object-fit:cover;object-position:center;
+    @media (min-width:740px){
+      .card{grid-column:span 6}
     }
-    .card h3{
-      margin:0;font-size:18px;letter-spacing:.2px
+    @media (min-width:1024px){
+      .card{grid-column:span 3}
     }
-    .muted{color:var(--muted);margin:2px 0 0}
 
-    /* Form */
-    .form-wrap{
-      background:linear-gradient(180deg,var(--panel),var(--panel-2));
-      border-top:1px solid #1b1b1b;
-      border-bottom:1px solid #1b1b1b;
+    .card-media{
+      height:140px;background: var(--panel);
+      background-image: var(--img, none);
+      background-size: cover;background-position:center;
+      border-bottom:1px solid rgba(255,255,255,.06);
     }
-    .form h2{
-      font-size: clamp(22px, 3.4vw, 30px);
-      margin:0 0 10px;
+    .card-body{padding:18px 18px 20px}
+    .card h3{margin:0 0 8px;font-size:18px;font-weight:800}
+    .card p{margin:0;color:var(--muted);line-height:1.65}
+
+    /* Email section */
+    .email{
+      margin-top:40px;padding:56px 0 80px;
     }
-    .form p{color:var(--muted);margin:0 0 24px}
-    .fields{
+    .email .lead{
+      text-align:center;color:var(--muted);max-width:900px;margin:0 auto 22px;
+    }
+    .form{
       display:grid;gap:12px;
-      grid-template-columns: 1fr;
+      grid-template-columns:1fr;
     }
-    @media(min-width:900px){.fields{grid-template-columns: 1.3fr 1fr 1fr auto}}
-    .input, .select{
+    @media (min-width:860px){
+      .form{grid-template-columns:1.2fr .9fr .9fr auto}
+    }
+    .field{
+      background:var(--panel-2);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px;padding:12px 14px;color:var(--text);
       width:100%;
-      background:#0f0f0f;
-      border:1px solid #272727;
-      color:var(--text);
-      padding:12px 12px;
-      border-radius:12px;
-      outline:none;
-      transition:border-color .12s ease, box-shadow .12s ease;
-      font-size:16px;
     }
-    .input:focus, .select:focus{
-      border-color:var(--brand);
-      box-shadow:0 0 0 6px var(--ring);
-    }
+    .field:focus{outline:none;box-shadow:var(--ring);border-color:rgba(255,255,255,.18)}
+    select.field{appearance:none;background-image:linear-gradient(45deg,transparent 50%, rgba(255,255,255,.5) 50%),linear-gradient(135deg, rgba(255,255,255,.5) 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size:6px 6px,6px 6px; background-repeat:no-repeat;}
+
     .btn{
-      background:linear-gradient(180deg,var(--brand),var(--brand-2));
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
       color:#fff;border:none;border-radius:12px;
-      padding:12px 18px;font-weight:700;letter-spacing:.3px;
-      cursor:pointer;box-shadow:var(--shadow);
-      transition:filter .08s ease, transform .08s ease;
+      padding:12px 18px;font-weight:800;cursor:pointer;
       white-space:nowrap;
+      box-shadow:0 8px 20px rgba(255,106,0,.20);
+      transition:transform .12s ease;
     }
-    .btn:hover{filter:brightness(1.05)}
-    .btn:active{transform:translateY(1px)}
+    .btn:hover{transform:translateY(-1px)}
+    .btn:active{transform:translateY(0)}
 
-    /* Footer */
-    footer{padding:28px 0;color:#9b9b9b;text-align:center;font-size:14px}
+    .ribbon{
+      margin:28px auto 8px;
+      width:min(1040px,92vw);
+      background:linear-gradient(90deg,#ff7a1a,#e55a00);
+      color:#fff;padding:18px 22px;border-radius:14px;
+      text-align:center;font-weight:800;letter-spacing:.2px;
+      box-shadow:0 10px 30px rgba(229,90,0,.25);
+    }
 
-    /* Util */
-    .sp-20{height:20px}
-    .sp-28{height:28px}
-    .sp-40{height:40px}
+    footer{
+      padding:34px 0;border-top:1px solid rgba(255,255,255,.06);
+      color:#9da3aa;text-align:center;font-size:14px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- HERO -->
-  <header class="hero wrap" id="top">
-    <h1>Connection Without Compromise</h1>
-    <p>
-      TradeScout connects <strong>homeowners</strong> and <strong>verified contractors</strong> without the noise—
-      no lead-selling, no spam, no middlemen. Just results.
-    </p>
-    <p class="center">
-      <button class="cta" data-scroll="#notify">
-        <span class="icon">🚀</span> Get Early Access
+  <!-- Header with CTA -->
+  <header>
+    <div class="container nav">
+      <div class="brand">TradeScout</div>
+      <button class="cta" data-scroll="#signup" aria-label="Get early access">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+        Get Early Access
       </button>
-    </p>
-    <div class="band">
-      Join <strong>500,000+ homeowners &amp; contractors</strong> across the USA who already trust TradeScout.
     </div>
   </header>
 
-  <!-- WHY -->
-  <section class="section wrap why" aria-labelledby="why-title">
-    <h2 id="why-title">Why TradeScout?</h2>
+  <!-- Hero -->
+  <section class="hero container">
+    <h1>Connection Without Compromise</h1>
+    <p>
+      Powering connections for <strong>500,000+ homeowners &amp; contractors</strong> nationwide.
+      TradeScout is the modern standard in home-improvement connections—no lead selling, no noise, just results.
+    </p>
+    <div class="cta-wrap">
+      <button class="cta" data-scroll="#signup">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+        Get Early Access
+      </button>
+    </div>
+  </section>
 
-    <div class="grid">
+  <!-- Why TradeScout -->
+  <section class="container stack-32" id="why">
+    <h2 class="section-title">Why TradeScout?</h2>
 
+    <div class="feature-grid">
       <!-- Accelerated Growth -->
-      <article class="card">
-        <div class="card-hero">
-          <img id="img-accel" alt="Accelerated Growth illustration" loading="lazy">
+      <article class="card" style="--img:url('assets/images/accelerated-growth.jpg')">
+        <div class="card-media"></div>
+        <div class="card-body">
+          <h3>Accelerated Growth</h3>
+          <p>Local, trusted contractors get the visibility they deserve—without paying for junk leads.</p>
         </div>
-        <h3>Accelerated Growth</h3>
-        <p class="muted">Local, trusted contractors get the visibility they deserve—without paying for junk leads.</p>
       </article>
 
       <!-- Find Helpers & Employees -->
-      <article class="card">
-        <div class="card-hero">
-          <img id="img-helpers" alt="Find helpers and employees" loading="lazy">
+      <article class="card" style="--img:url('assets/images/find-helpers-and-employees.jpg')">
+        <div class="card-media"></div>
+        <div class="card-body">
+          <h3>Find Helpers &amp; Employees</h3>
+          <p>Build your crew faster. Contractors find reliable helpers, and workers connect with opportunity.</p>
         </div>
-        <h3>Find Helpers &amp; Employees</h3>
-        <p class="muted">Build crews faster. Contractors find reliable helpers, and workers connect with opportunity.</p>
       </article>
 
-      <!-- Number One Source -->
-      <article class="card">
-        <div class="card-hero">
-          <img id="img-number" alt="Number One Source hub" loading="lazy">
+      <!-- Direct Connect -->
+      <article class="card" style="--img:url('assets/images/direct-connect.jpg')">
+        <div class="card-media"></div>
+        <div class="card-body">
+          <h3>Direct Connect</h3>
+          <p>The hub where homeowners &amp; contractors connect directly—no middlemen, no gatekeepers.</p>
         </div>
-        <h3>The #1 Source</h3>
-        <p class="muted">A single hub for homeowners and contractors to connect directly—no gatekeepers.</p>
       </article>
 
       <!-- Homeowner Tools -->
-      <article class="card">
-        <div class="card-hero">
-          <img id="img-tools" alt="Homeowner tools" loading="lazy">
+      <article class="card" style="--img:url('assets/images/homeowner-tools.jpg')">
+        <div class="card-media"></div>
+        <div class="card-body">
+          <h3>Homeowner Tools</h3>
+          <p>Track projects, request bids, and find verified professionals with confidence.</p>
         </div>
-        <h3>Homeowner Tools</h3>
-        <p class="muted">Track projects, request bids, and find verified pros with confidence.</p>
       </article>
-
     </div>
   </section>
 
-  <!-- CRED BAND -->
-  <section class="wrap">
-    <div class="sp-20"></div>
-    <div class="band" style="max-width:1020px">
-      Powering connections for <strong>homeowners &amp; contractors nationwide</strong>. Be part of what’s next.
-    </div>
-    <div class="sp-28"></div>
-  </section>
+  <!-- Big social proof -->
+  <div class="ribbon">
+    Join 500,000+ homeowners &amp; contractors who already trust TradeScout. Be part of the future of home improvement.
+  </div>
 
-  <!-- SIGNUP -->
-  <section class="section form-wrap" id="notify" aria-labelledby="form-title">
-    <div class="wrap form center">
-      <h2 id="form-title">Get Early Access</h2>
-      <p>Sign up and we’ll notify you the moment TradeScout goes live.</p>
+  <!-- Email signup -->
+  <section id="signup" class="email container stack-32" aria-labelledby="get-started">
+    <h2 id="get-started" class="section-title" style="text-align:center">Get Early Access</h2>
+    <p class="lead">Sign up today and we’ll notify you the moment we go live.</p>
 
-      <form action="https://formspree.io/f/xovlzjlq" method="POST" class="fields" autocomplete="on">
-        <!-- Email (required) -->
-        <label class="sr" for="email">Email</label>
-        <input id="email" name="email" type="email" class="input" placeholder="Your Email (required)" required>
+    <form class="form" action="https://formspree.io/f/xovlzjlq" method="POST">
+      <!-- Email (required) -->
+      <input class="field" type="email" name="email" placeholder="Your Email (required)" required aria-label="Email (required)" />
 
-        <!-- Name (optional) -->
-        <label class="sr" for="name">Name</label>
-        <input id="name" name="name" type="text" class="input" placeholder="Your Name (optional)" inputmode="text" autocomplete="name">
+      <!-- Name (optional) -->
+      <input class="field" type="text" name="name" placeholder="Your Name (optional)" aria-label="Your name" />
 
-        <!-- State (optional) -->
-        <label class="sr" for="state">State</label>
-        <select id="state" name="state" class="select" aria-label="Your State (optional)">
-          <option value="">Your State (optional)</option>
-          <option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option>
-          <option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option>
-          <option>HI</option><option>ID</option><option>IL</option><option>IN</option><option>IA</option>
-          <option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option>
-          <option>MA</option><option>MI</option><option>MN</option><option>MS</option><option>MO</option>
-          <option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option>
-          <option>NM</option><option>NY</option><option>NC</option><option>ND</option><option>OH</option>
-          <option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option>
-          <option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VT</option>
-          <option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option>
-        </select>
+      <!-- State (optional) -->
+      <select class="field" name="state" aria-label="Your state (optional)">
+        <option value="">Your State (optional)</option>
+        <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+        <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+        <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+        <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+        <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+        <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+        <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+        <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+        <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+        <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+        <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+        <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+        <option>WI</option><option>WY</option>
+      </select>
 
-        <!-- Submit -->
-        <button type="submit" class="btn">Notify Me</button>
+      <!-- Submit -->
+      <button class="btn" type="submit">Notify Me</button>
 
-        <!-- Redirect after submit -->
-        <input type="hidden" name="_redirect" value="thank-you.html">
-      </form>
-    </div>
+      <!-- Redirect -->
+      <input type="hidden" name="_redirect" value="thank-you.html" />
+    </form>
   </section>
 
   <footer>
-    © <span id="y"></span> TradeScout. All rights reserved.
+    © 2025 TradeScout. All rights reserved.
   </footer>
 
   <script>
-    // ========= IMAGE PATHS (EDIT HERE) =========
-    // If your filenames differ or lack an extension, change these strings accordingly.
-    const acceleratedGrowthImg = "assets/images/accelerated%20growth%20for%20local%20trusted%20contractors.jpg";
-    const findHelpersImg       = "assets/images/find%20helpers%20and%20employees.jpg";
-    const numberOneSrcImg      = "assets/images/number%20one%20source%20for%20number%20one%20sources.jpg";
-    const homeownerToolsImg    = "assets/images/tools%20and%20snapshots%20for%20homeowners.jpg";
-
-    // Inject images with a safe fallback (show nothing if not found)
-    const inject = (id, src) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-      el.src = src;
-      el.onerror = () => { el.style.display = "none"; }
-    };
-    inject("img-accel", acceleratedGrowthImg);
-    inject("img-helpers", findHelpersImg);
-    inject("img-number", numberOneSrcImg);
-    inject("img-tools", homeownerToolsImg);
-
-    // Smooth scroll to form
-    document.querySelectorAll("[data-scroll]").forEach(btn => {
-      btn.addEventListener("click", e => {
-        const target = btn.getAttribute("data-scroll");
+    // Smooth scroll for CTA buttons
+    document.querySelectorAll('[data-scroll]').forEach(btn=>{
+      btn.addEventListener('click', e=>{
+        const target = btn.getAttribute('data-scroll');
         const el = document.querySelector(target);
-        if (el) {
-          e.preventDefault();
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
       });
     });
 
-    // Footer year
-    document.getElementById("y").textContent = new Date().getFullYear();
-
-    // Accessibility helper (visually hidden labels)
-    document.querySelectorAll(".sr").forEach(l => {
-      l.style.position="absolute";
-      l.style.width="1px";
-      l.style.height="1px";
-      l.style.margin="-1px";
-      l.style.padding="0";
-      l.style.border="0";
-      l.style.overflow="hidden";
-      l.style.clip="rect(0 0 0 0)";
-      l.style.whiteSpace="nowrap";
-    });
+    // Optional: if you want to ensure missing images don't flash broken icons,
+    // we’re using CSS background images. Nothing needed here.
   </script>
 </body>
 </html>
