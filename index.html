@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- v: 2025-08-17-TS1 -->
+  <!-- v: 2025-08-17-TS2 (with Reviews) -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TradeScout — Connection Without Compromise</title>
@@ -9,7 +9,7 @@
   <meta name="theme-color" content="#0e0e0f" />
   <link rel="canonical" href="https://info.thetradescout.us/" />
 
-  <!-- Open Graph / Twitter -->
+  <!-- Social -->
   <meta property="og:title" content="TradeScout — Connection Without Compromise" />
   <meta property="og:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
   <meta property="og:type" content="website" />
@@ -63,7 +63,7 @@
     .hero p{margin:0 auto;max-width:780px;color:var(--muted);font-size:clamp(16px,1.9vw,18px)}
     .hero .cta-wrap{margin-top:28px}
 
-    /* Why grid (uses CSS backgrounds to avoid broken img icon) */
+    /* Why grid (CSS backgrounds) */
     .section-title{font-size:22px;font-weight:900;letter-spacing:.2px;margin:0 0 22px}
     .feature-grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
     .card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
@@ -73,13 +73,28 @@
     .card-media{height:180px;position:relative;background:var(--panel);border-bottom:1px solid rgba(255,255,255,.06);
       background-size:cover;background-position:center}
     .card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35))}
-    .bg-accel{background-image:url('assets/images/accelerated-growth.jpg?v=1')}
-    .bg-helpers{background-image:url('assets/images/find-helpers-employees.jpg?v=1')}
-    .bg-direct{background-image:url('assets/images/direct-connect.jpg?v=1')}
-    .bg-tools{background-image:url('assets/images/homeowner-tools.jpg?v=1')}
+    .bg-accel  { background-image:url('assets/images/accelerated-growth.jpg?v=2'); }
+    .bg-helpers{ background-image:url('assets/images/find-helpers-employees.jpg?v=2'); }
+    .bg-direct { background-image:url('assets/images/direct-connect.jpg?v=2'); }
+    .bg-tools  { background-image:url('assets/images/homeowner-tools.jpg?v=2'); }
     .card-body{padding:18px 18px 20px}
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
     .card p{margin:0;color:var(--muted);line-height:1.65}
+
+    /* Reviews */
+    .reviews{padding:42px 0 12px}
+    .reviews h2{margin:0 0 18px;font-size:22px;font-weight:900;letter-spacing:.2px}
+    .reviews-grid{display:grid;gap:16px;grid-template-columns:1fr}
+    @media (min-width:860px){.reviews-grid{grid-template-columns:repeat(3,1fr)}}
+    .review{
+      background:var(--panel-2);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:16px;
+      padding:18px 18px 16px;
+      box-shadow:var(--shadow);
+    }
+    .quote{color:#dfe3e7;line-height:1.7;margin:0 0 10px;font-style:italic}
+    .author{color:#b9c0c7;font-weight:800;margin:0}
 
     .ribbon{margin:28px auto 8px;width:min(var(--maxw),92vw);background:linear-gradient(90deg,#ff7a1a,#e55a00);
       color:#fff;padding:18px 22px;border-radius:14px;text-align:center;font-weight:900;letter-spacing:.2px;
@@ -102,7 +117,7 @@
 </head>
 <body>
 
-  <!-- Header (no Services link) -->
+  <!-- Header -->
   <header>
     <div class="container nav">
       <div class="brand">TradeScout</div>
@@ -160,7 +175,26 @@
     </div>
   </section>
 
-  <!-- Social proof -->
+  <!-- Reviews / Social Proof -->
+  <section class="reviews container" aria-labelledby="reviewstitle">
+    <h2 id="reviewstitle">What People Are Saying</h2>
+    <div class="reviews-grid">
+      <blockquote class="review" aria-label="Review from homeowner Sarah L.">
+        <p class="quote">“TradeScout helped me find a roofer in two days — no spam calls, just the right fit.”</p>
+        <p class="author">— Sarah L., Homeowner</p>
+      </blockquote>
+      <blockquote class="review" aria-label="Review from contractor Mike R.">
+        <p class="quote">“I cut my marketing spend in half and still booked more jobs than ever.”</p>
+        <p class="author">— Mike R., Contractor</p>
+      </blockquote>
+      <blockquote class="review" aria-label="Review from remodeling pro Jasmine T.">
+        <p class="quote">“Finally, a platform that connects us directly without paying for dead-end leads.”</p>
+        <p class="author">— Jasmine T., Remodeling Pro</p>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Social proof ribbon -->
   <div class="ribbon">Join 500,000+ people who already trust TradeScout. Be part of the future of home improvement.</div>
 
   <!-- Email signup -->
@@ -212,4 +246,3 @@
   </script>
 </body>
 </html>
-
