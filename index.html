@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- v: 2025-08-17-TS4 (predatory-predecessors + re-ordered cards + network banner) -->
+  <!-- v: 2025-08-17-TS5 (logo preview + header icon) -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TradeScout — Connection Without Compromise</title>
@@ -9,16 +9,21 @@
   <meta name="theme-color" content="#0e0e0f" />
   <link rel="canonical" href="https://info.thetradescout.us/" />
 
-  <!-- Social -->
+  <!-- Social previews (use your uploaded logo) -->
   <meta property="og:title" content="TradeScout — Connection Without Compromise" />
   <meta property="og:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://info.thetradescout.us/" />
-  <meta property="og:image" content="https://info.thetradescout.us/assets/images/direct-connect.jpg" />
+  <meta property="og:image" content="https://info.thetradescout.us/assets/images/logo.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TradeScout — Connection Without Compromise" />
   <meta name="twitter:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
-  <meta name="twitter:image" content="https://info.thetradescout.us/assets/images/direct-connect.jpg" />
+  <meta name="twitter:image" content="https://info.thetradescout.us/assets/images/logo.jpg" />
+
+  <!-- Icons (reuse logo) -->
+  <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg" sizes="32x32">
+  <link rel="icon" href="assets/images/logo.jpg" type="image/jpeg" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/images/logo.jpg">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +61,11 @@
       border-bottom:1px solid rgba(255,255,255,.06);
     }
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-weight:900;letter-spacing:.2px;font-size:22px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px;font-size:22px}
+    .brand-icon{
+      width:28px;height:28px;border-radius:999px;object-fit:cover;display:block;
+      border:1px solid rgba(255,255,255,.12); box-shadow:0 0 0 2px rgba(0,0,0,.25);
+    }
     .cta{
       display:inline-flex;align-items:center;gap:10px;
       background:linear-gradient(90deg,var(--brand),var(--brand-2));
@@ -101,10 +110,10 @@
     }
     .card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35))}
     /* exact filenames */
-    .bg-accel  { background-image:url('assets/images/accelerated-growth.jpg?v=4'); }
-    .bg-helpers{ background-image:url('assets/images/find-helpers-employees.jpg?v=4'); }
-    .bg-direct { background-image:url('assets/images/direct-connect.jpg?v=4'); }
-    .bg-tools  { background-image:url('assets/images/homeowner-tools.jpg?v=4'); }
+    .bg-accel  { background-image:url('assets/images/accelerated-growth.jpg?v=5'); }
+    .bg-helpers{ background-image:url('assets/images/find-helpers-employees.jpg?v=5'); }
+    .bg-direct { background-image:url('assets/images/direct-connect.jpg?v=5'); }
+    .bg-tools  { background-image:url('assets/images/homeowner-tools.jpg?v=5'); }
     .card-body{padding:18px 18px 20px}
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
     .card p{margin:0;color:var(--muted);line-height:1.65}
@@ -160,7 +169,10 @@
   <!-- Header -->
   <header>
     <div class="container nav">
-      <div class="brand">TradeScout</div>
+      <div class="brand">
+        <img class="brand-icon" src="assets/images/logo.jpg" alt="" width="28" height="28" decoding="async">
+        <span>TradeScout</span>
+      </div>
       <a class="cta" href="#signup" aria-label="Get early access">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
@@ -296,4 +308,3 @@
   </script>
 </body>
 </html>
-
