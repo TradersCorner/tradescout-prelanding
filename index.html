@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- v: 2025-08-17-TS2 (with Reviews) -->
+  <!-- v: 2025-08-17-TS3 (two reviews, fixed images) -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TradeScout — Connection Without Compromise</title>
@@ -40,7 +40,8 @@
         repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 48px),
         repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 48px),
         var(--bg);
-      color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
       scroll-behavior:smooth;
     }
     a{color:inherit;text-decoration:none}
@@ -48,68 +49,108 @@
     .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* Header */
-    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
-      background:rgba(14,14,15,.7);border-bottom:1px solid rgba(255,255,255,.06)}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(14,14,15,.7);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{font-weight:900;letter-spacing:.2px;font-size:22px}
-    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff;padding:12px 18px;border:none;border-radius:999px;font-weight:800;cursor:pointer;
-      box-shadow:0 8px 20px rgba(255,106,0,.20);transition:transform .12s ease}
-    .cta:hover{transform:translateY(-1px)} .cta svg{opacity:.9}
+    .cta{
+      display:inline-flex;align-items:center;gap:10px;
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff;padding:12px 18px;border:none;border-radius:999px;
+      font-weight:800;cursor:pointer;
+      box-shadow:0 8px 20px rgba(255,106,0,.20);
+      transition:transform .12s ease;
+    }
+    .cta:hover{transform:translateY(-1px)}
+    .cta svg{opacity:.9}
 
     /* Hero */
     .hero{padding:72px 0 32px;text-align:center}
-    .hero h1{margin:0 0 16px;font-size:clamp(32px,3.6vw,50px);line-height:1.08;font-weight:900;letter-spacing:.2px}
-    .hero p{margin:0 auto;max-width:780px;color:var(--muted);font-size:clamp(16px,1.9vw,18px)}
+    .hero h1{
+      margin:0 0 16px;
+      font-size:clamp(32px,3.6vw,50px);
+      line-height:1.08;font-weight:900;letter-spacing:.2px;
+    }
+    .hero p{
+      margin:0 auto;max-width:780px;color:var(--muted);
+      font-size:clamp(16px,1.9vw,18px);
+    }
     .hero .cta-wrap{margin-top:28px}
 
     /* Why grid (CSS backgrounds) */
     .section-title{font-size:22px;font-weight:900;letter-spacing:.2px;margin:0 0 22px}
     .feature-grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
-    .card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
-      border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .card{
+      grid-column:span 12;
+      background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
     @media (min-width:740px){.card{grid-column:span 6}}
     @media (min-width:1024px){.card{grid-column:span 3}}
-    .card-media{height:180px;position:relative;background:var(--panel);border-bottom:1px solid rgba(255,255,255,.06);
-      background-size:cover;background-position:center}
+    .card-media{
+      height:180px;position:relative;background:var(--panel);
+      border-bottom:1px solid rgba(255,255,255,.06);
+      background-size:cover;background-position:center;
+    }
     .card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35))}
-    .bg-accel  { background-image:url('assets/images/accelerated-growth.jpg?v=2'); }
-    .bg-helpers{ background-image:url('assets/images/find-helpers-employees.jpg?v=2'); }
-    .bg-direct { background-image:url('assets/images/direct-connect.jpg?v=2'); }
-    .bg-tools  { background-image:url('assets/images/homeowner-tools.jpg?v=2'); }
+    /* Use your exact filenames */
+    .bg-accel  { background-image:url('assets/images/accelerated-growth.jpg?v=3'); }
+    .bg-helpers{ background-image:url('assets/images/find-helpers-employees.jpg?v=3'); }
+    .bg-direct { background-image:url('assets/images/direct-connect.jpg?v=3'); }
+    .bg-tools  { background-image:url('assets/images/homeowner-tools.jpg?v=3'); }
     .card-body{padding:18px 18px 20px}
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
     .card p{margin:0;color:var(--muted);line-height:1.65}
 
-<!-- Reviews / Social Proof -->
-<section class="reviews container" aria-labelledby="reviewstitle">
-  <h2 id="reviewstitle" class="section-title">What People Are Saying</h2>
+    /* Reviews (two only) */
+    .reviews{padding:42px 0 12px}
+    .reviews h2{margin:0 0 18px;font-size:22px;font-weight:900;letter-spacing:.2px}
+    .reviews-grid{display:grid;gap:24px;grid-template-columns:1fr;max-width:900px;margin:0 auto;text-align:center}
+    @media (min-width:860px){.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+    .review{margin:0}
+    .quote{font-style:italic;font-size:18px;line-height:1.6;color:#f1f1f1;margin:0 0 8px}
+    .author{font-weight:800;color:#ff6a00;margin:0}
 
-  <div class="reviews-grid">
-    <blockquote class="review">
-      <p class="quote">“TradeScout helped me plan and hire with confidence. No middlemen, no wasted time.”</p>
-      <p class="author">— Real Homeowner From The Future</p>
-    </blockquote>
-
-    <blockquote class="review">
-      <p class="quote">“Finally a platform where I connect directly with real homeowners — not paying for dead-end leads.”</p>
-      <p class="author">— Real Contractor From The Future</p>
-    </blockquote>
-  </div>
-</section>
-
+    .ribbon{
+      margin:28px auto 8px;width:min(var(--maxw),92vw);
+      background:linear-gradient(90deg,#ff7a1a,#e55a00);color:#fff;
+      padding:18px 22px;border-radius:14px;text-align:center;
+      font-weight:900;letter-spacing:.2px;
+      box-shadow:0 10px 30px rgba(229,90,0,.25);
+    }
 
     /* Signup */
     .email{margin-top:40px;padding:56px 0 80px}
     .email .lead{text-align:center;color:var(--muted);max-width:900px;margin:0 auto 22px}
     .form{display:grid;gap:12px;grid-template-columns:1fr}
     @media (min-width:860px){.form{grid-template-columns:1.2fr .9fr .9fr auto}}
-    .field{background:var(--panel-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px;color:var(--text);width:100%}
+    .field{
+      background:var(--panel-2);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px;padding:12px 14px;color:var(--text);width:100%;
+    }
     .field:focus{outline:none;box-shadow:var(--ring);border-color:rgba(255,255,255,.18)}
-    select.field{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.5) 50%),linear-gradient(135deg,rgba(255,255,255,.5) 50%,transparent 50%);
-      background-position:calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size:6px 6px,6px 6px;background-repeat:no-repeat}
-    .btn{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;border:none;border-radius:12px;padding:12px 18px;
-      font-weight:900;cursor:pointer;white-space:nowrap;box-shadow:0 8px 20px rgba(255,106,0,.20);transition:transform .12s ease}
+    select.field{
+      appearance:none;
+      background-image:
+        linear-gradient(45deg,transparent 50%, rgba(255,255,255,.5) 50%),
+        linear-gradient(135deg, rgba(255,255,255,.5) 50%, transparent 50%);
+      background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
+      background-size:6px 6px,6px 6px;background-repeat:no-repeat;
+    }
+    .btn{
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff;border:none;border-radius:12px;padding:12px 18px;
+      font-weight:900;cursor:pointer;white-space:nowrap;
+      box-shadow:0 8px 20px rgba(255,106,0,.20);transition:transform .12s ease;
+    }
     .btn:hover{transform:translateY(-1px)}
     footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.06);color:#9da3aa;text-align:center;font-size:14px}
   </style>
@@ -150,6 +191,7 @@
           <p>Get in front of real homeowners—no paywall, no junk leads.</p>
         </div>
       </article>
+
       <article class="card">
         <div class="card-media bg-helpers"></div>
         <div class="card-body">
@@ -157,6 +199,7 @@
           <p>Post roles, meet reliable helpers, and build your crew faster.</p>
         </div>
       </article>
+
       <article class="card">
         <div class="card-media bg-direct"></div>
         <div class="card-body">
@@ -164,6 +207,7 @@
           <p>Homeowners and contractors, connected directly—no middlemen.</p>
         </div>
       </article>
+
       <article class="card">
         <div class="card-media bg-tools"></div>
         <div class="card-body">
@@ -174,21 +218,18 @@
     </div>
   </section>
 
-  <!-- Reviews / Social Proof -->
+  <!-- Reviews (exact usernames, 2 only) -->
   <section class="reviews container" aria-labelledby="reviewstitle">
     <h2 id="reviewstitle">What People Are Saying</h2>
     <div class="reviews-grid">
-      <blockquote class="review" aria-label="Review from homeowner Sarah L.">
-        <p class="quote">“TradeScout helped me find a roofer in two days — no spam calls, just the right fit.”</p>
-        <p class="author">— Sarah L., Homeowner</p>
+      <blockquote class="review" aria-label="Review from Real Homeowner From The Future">
+        <p class="quote">“TradeScout made it simple to post my project and hire fast. Zero spam — just real pros.”</p>
+        <p class="author">— Real Homeowner From The Future</p>
       </blockquote>
-      <blockquote class="review" aria-label="Review from contractor Mike R.">
-        <p class="quote">“I cut my marketing spend in half and still booked more jobs than ever.”</p>
-        <p class="author">— Mike R., Contractor</p>
-      </blockquote>
-      <blockquote class="review" aria-label="Review from remodeling pro Jasmine T.">
-        <p class="quote">“Finally, a platform that connects us directly without paying for dead-end leads.”</p>
-        <p class="author">— Jasmine T., Remodeling Pro</p>
+
+      <blockquote class="review" aria-label="Review from Real Contractor From The Future">
+        <p class="quote">“I connected with real homeowners directly and booked work without buying leads. Finally.”</p>
+        <p class="author">— Real Contractor From The Future</p>
       </blockquote>
     </div>
   </section>
@@ -200,11 +241,14 @@
   <section id="signup" class="email container" aria-labelledby="get-started">
     <h2 id="get-started" class="section-title" style="text-align:center">Get Early Access</h2>
     <p class="lead">Drop your email and we’ll notify you the moment we go live.</p>
+
     <form class="form" action="https://formspree.io/f/xovlzjlq" method="POST" data-analytics="signup-form">
       <label class="sr-only" for="email">Email (required)</label>
       <input class="field" id="email" type="email" name="email" placeholder="Your Email (required)" required inputmode="email" autocomplete="email" aria-required="true" />
+
       <label class="sr-only" for="name">Your name (optional)</label>
       <input class="field" id="name" type="text" name="name" placeholder="Your Name (optional)" autocomplete="name" />
+
       <label class="sr-only" for="state">Your state (optional)</label>
       <select class="field" id="state" name="state" autocomplete="address-level1">
         <option value="">Your State (optional)</option>
@@ -222,6 +266,7 @@
         <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
         <option>WI</option><option>WY</option>
       </select>
+
       <button class="btn" type="submit" aria-label="Notify me when TradeScout launches">Notify Me</button>
       <input type="hidden" name="_redirect" value="thank-you.html" />
     </form>
@@ -230,18 +275,18 @@
   <footer>© 2025 TradeScout. All rights reserved.</footer>
 
   <script>
-    // Smooth scroll
+    // Smooth scroll for in-page anchors
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         const id=a.getAttribute('href'); const el=document.querySelector(id);
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}) }
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
       });
     });
 
     // Basic analytics hook
     window.dataLayer=window.dataLayer||[];
     const form=document.querySelector('form[data-analytics="signup-form"]');
-    if(form){ form.addEventListener('submit',()=>{ try{ window.dataLayer.push({event:'signup_submit',location:'landing'}) }catch(e){} }) }
+    if(form){ form.addEventListener('submit',()=>{ try{ window.dataLayer.push({event:'signup_submit',location:'landing'}) }catch(e){} }); }
   </script>
 </body>
 </html>
