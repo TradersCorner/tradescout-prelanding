@@ -9,16 +9,20 @@
   <meta name="theme-color" content="#0e0e0f" />
   <link rel="canonical" href="https://info.thetradescout.us/" />
 
-  <!-- Social -->
+  <!-- Social (updated to logo.png) -->
   <meta property="og:title" content="TradeScout — Connection Without Compromise" />
   <meta property="og:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://info.thetradescout.us/" />
-  <meta property="og:image" content="https://info.thetradescout.us/assets/images/direct-connect.jpg" />
+  <meta property="og:image" content="https://info.thetradescout.us/assets/images/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TradeScout — Connection Without Compromise" />
   <meta name="twitter:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
-  <meta name="twitter:image" content="https://info.thetradescout.us/assets/images/direct-connect.jpg" />
+  <meta name="twitter:image" content="https://info.thetradescout.us/assets/images/logo.png" />
+
+  <!-- Icons (new) -->
+  <link rel="icon" href="assets/images/logo.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="assets/images/logo.png" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -56,7 +60,9 @@
       border-bottom:1px solid rgba(255,255,255,.06);
     }
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    .brand{font-weight:900;letter-spacing:.2px;font-size:22px}
+    /* updated brand styles to support the circle icon */
+    .brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px;font-size:22px}
+    .brand-icon{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12)}
     .cta{
       display:inline-flex;align-items:center;gap:10px;
       background:linear-gradient(90deg,var(--brand),var(--brand-2));
@@ -160,7 +166,11 @@
   <!-- Header -->
   <header>
     <div class="container nav">
-      <div class="brand">TradeScout</div>
+      <!-- brand updated to include circle logo -->
+      <div class="brand">
+        <img class="brand-icon" src="assets/images/logo.png" alt="" width="28" height="28" decoding="async">
+        <span>TradeScout</span>
+      </div>
       <a class="cta" href="#signup" aria-label="Get early access">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
@@ -174,7 +184,7 @@
     <p>Predatory predecessors sold your information as “leads.” TradeScout builds a network where homeowners and contractors connect directly — no middlemen, no games.</p>
     <div class="cta-wrap">
       <a class="cta" href="#signup" aria-label="Get early access">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6 4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
       </a>
     </div>
