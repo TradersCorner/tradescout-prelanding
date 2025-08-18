@@ -81,24 +81,23 @@
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
     .card p{margin:0;color:var(--muted);line-height:1.65}
 
-    /* Reviews */
-    .reviews{padding:42px 0 12px}
-    .reviews h2{margin:0 0 18px;font-size:22px;font-weight:900;letter-spacing:.2px}
-    .reviews-grid{display:grid;gap:16px;grid-template-columns:1fr}
-    @media (min-width:860px){.reviews-grid{grid-template-columns:repeat(3,1fr)}}
-    .review{
-      background:var(--panel-2);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:16px;
-      padding:18px 18px 16px;
-      box-shadow:var(--shadow);
-    }
-    .quote{color:#dfe3e7;line-height:1.7;margin:0 0 10px;font-style:italic}
-    .author{color:#b9c0c7;font-weight:800;margin:0}
+<!-- Reviews / Social Proof -->
+<section class="reviews container" aria-labelledby="reviewstitle">
+  <h2 id="reviewstitle" class="section-title">What People Are Saying</h2>
 
-    .ribbon{margin:28px auto 8px;width:min(var(--maxw),92vw);background:linear-gradient(90deg,#ff7a1a,#e55a00);
-      color:#fff;padding:18px 22px;border-radius:14px;text-align:center;font-weight:900;letter-spacing:.2px;
-      box-shadow:0 10px 30px rgba(229,90,0,.25)}
+  <div class="reviews-grid">
+    <blockquote class="review">
+      <p class="quote">“TradeScout helped me plan and hire with confidence. No middlemen, no wasted time.”</p>
+      <p class="author">— Real Homeowner From The Future</p>
+    </blockquote>
+
+    <blockquote class="review">
+      <p class="quote">“Finally a platform where I connect directly with real homeowners — not paying for dead-end leads.”</p>
+      <p class="author">— Real Contractor From The Future</p>
+    </blockquote>
+  </div>
+</section>
+
 
     /* Signup */
     .email{margin-top:40px;padding:56px 0 80px}
