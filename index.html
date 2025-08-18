@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Essentials -->
+  <!-- v: 2025-08-17-TS1 -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TradeScout — Connection Without Compromise</title>
@@ -9,248 +9,149 @@
   <meta name="theme-color" content="#0e0e0f" />
   <link rel="canonical" href="https://info.thetradescout.us/" />
 
-  <!-- Social (replace image URLs if you have a final one) -->
+  <!-- Open Graph / Twitter -->
   <meta property="og:title" content="TradeScout — Connection Without Compromise" />
   <meta property="og:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://info.thetradescout.us/" />
-  <meta property="og:image" content="assets/images/accelerated-growth.jpg" />
+  <meta property="og:image" content="https://info.thetradescout.us/assets/images/direct-connect.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="TradeScout — Connection Without Compromise" />
   <meta name="twitter:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
-  <meta name="twitter:image" content="assets/images/accelerated-growth.jpg" />
+  <meta name="twitter:image" content="https://info.thetradescout.us/assets/images/direct-connect.jpg" />
 
-  <!-- Fonts (safe to remove if you prefer system fonts) -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- Icons (optional) -->
-  <link rel="icon" href="assets/favicon.ico" sizes="any">
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="manifest" href="manifest.json">
-
   <style>
     :root{
-      --bg:#0e0e0f;
-      --panel:#141416;
-      --panel-2:#17181a;
-      --muted:#9aa0a6;
-      --text:#f7f7f8;
-      --brand:#ff6a00;
-      --brand-2:#e55900;
-      --radius:16px;
-      --shadow:0 10px 30px rgba(0,0,0,.45);
-      --ring:0 0 0 3px rgba(255,106,0,.25);
-      --maxw:1120px;
+      --bg:#0e0e0f; --panel:#141416; --panel-2:#17181a; --muted:#9aa0a6; --text:#f7f7f8;
+      --brand:#ff6a00; --brand-2:#e55900; --radius:16px; --shadow:0 10px 30px rgba(0,0,0,.45);
+      --ring:0 0 0 3px rgba(255,106,0,.25); --maxw:1120px;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
       background:
-        radial-gradient(1200px 600px at 50% -200px, #17181a 0%, transparent 60%),
+        radial-gradient(1200px 600px at 50% -200px,#17181a 0%,transparent 60%),
+        repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 48px),
+        repeating-linear-gradient(90deg,rgba(255,255,255,.03) 0 1px,transparent 1px 48px),
         var(--bg);
-      color:var(--text);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      color:var(--text);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
       scroll-behavior:smooth;
     }
     a{color:inherit;text-decoration:none}
-    img{max-width:100%;display:block}
-
     .container{width:min(var(--maxw),92vw);margin-inline:auto}
-
-    /* A11y helper */
-    .sr-only{
-      position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;
-      overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
-    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
     /* Header */
-    header{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter:blur(10px);
-      background:rgba(14,14,15,.7);
-      border-bottom:1px solid rgba(255,255,255,.06);
-    }
+    header{position:sticky;top:0;z-index:50;backdrop-filter:blur(10px);
+      background:rgba(14,14,15,.7);border-bottom:1px solid rgba(255,255,255,.06)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
     .brand{font-weight:900;letter-spacing:.2px;font-size:22px}
-
-    .cta{
-      display:inline-flex;align-items:center;gap:10px;
-      background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff;padding:12px 18px;border:none;border-radius:999px;
-      font-weight:800;cursor:pointer;
-      box-shadow:0 8px 20px rgba(255,106,0,.20);
-      transition:transform .12s ease, box-shadow .2s ease;
-    }
-    .cta:hover{transform:translateY(-1px)}
-    .cta:active{transform:translateY(0)}
-    .cta svg{opacity:.9}
-    .cta-link{display:none}
-    noscript .cta-link{display:inline-flex}
+    .cta{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff;padding:12px 18px;border:none;border-radius:999px;font-weight:800;cursor:pointer;
+      box-shadow:0 8px 20px rgba(255,106,0,.20);transition:transform .12s ease}
+    .cta:hover{transform:translateY(-1px)} .cta svg{opacity:.9}
 
     /* Hero */
     .hero{padding:72px 0 32px;text-align:center}
-    .hero h1{
-      margin:0 0 16px;
-      font-size:clamp(32px,3.6vw,50px);
-      line-height:1.08;font-weight:900;letter-spacing:.2px;
-    }
-    .hero p{
-      margin:0 auto;max-width:780px;color:var(--muted);
-      font-size:clamp(16px,1.9vw,18px);
-    }
+    .hero h1{margin:0 0 16px;font-size:clamp(32px,3.6vw,50px);line-height:1.08;font-weight:900;letter-spacing:.2px}
+    .hero p{margin:0 auto;max-width:780px;color:var(--muted);font-size:clamp(16px,1.9vw,18px)}
     .hero .cta-wrap{margin-top:28px}
 
-    /* Features */
+    /* Why grid (uses CSS backgrounds to avoid broken img icon) */
     .section-title{font-size:22px;font-weight:900;letter-spacing:.2px;margin:0 0 22px}
     .feature-grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
-    .card{
-      grid-column:span 12;
-      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01));
-      border:1px solid rgba(255,255,255,.06);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);overflow:hidden;
-    }
+    .card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01));
+      border:1px solid rgba(255,255,255,.06);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
     @media (min-width:740px){.card{grid-column:span 6}}
     @media (min-width:1024px){.card{grid-column:span 3}}
-    .card-media{
-      height:180px;background: var(--panel);
-      border-bottom:1px solid rgba(255,255,255,.06);
-      display:flex;align-items:center;justify-content:center;overflow:hidden;
-    }
-    .card-media img{width:100%;height:100%;object-fit:cover}
+    .card-media{height:180px;position:relative;background:var(--panel);border-bottom:1px solid rgba(255,255,255,.06);
+      background-size:cover;background-position:center}
+    .card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35))}
+    .bg-accel{background-image:url('assets/images/accelerated-growth.jpg?v=1')}
+    .bg-helpers{background-image:url('assets/images/find-helpers-employees.jpg?v=1')}
+    .bg-direct{background-image:url('assets/images/direct-connect.jpg?v=1')}
+    .bg-tools{background-image:url('assets/images/homeowner-tools.jpg?v=1')}
     .card-body{padding:18px 18px 20px}
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
     .card p{margin:0;color:var(--muted);line-height:1.65}
 
-    /* Ribbon */
-    .ribbon{
-      margin:28px auto 8px;width:min(var(--maxw),92vw);
-      background:linear-gradient(90deg,#ff7a1a,#e55a00);color:#fff;
-      padding:18px 22px;border-radius:14px;text-align:center;
-      font-weight:900;letter-spacing:.2px;
-      box-shadow:0 10px 30px rgba(229,90,0,.25);
-    }
+    .ribbon{margin:28px auto 8px;width:min(var(--maxw),92vw);background:linear-gradient(90deg,#ff7a1a,#e55a00);
+      color:#fff;padding:18px 22px;border-radius:14px;text-align:center;font-weight:900;letter-spacing:.2px;
+      box-shadow:0 10px 30px rgba(229,90,0,.25)}
 
     /* Signup */
     .email{margin-top:40px;padding:56px 0 80px}
     .email .lead{text-align:center;color:var(--muted);max-width:900px;margin:0 auto 22px}
     .form{display:grid;gap:12px;grid-template-columns:1fr}
     @media (min-width:860px){.form{grid-template-columns:1.2fr .9fr .9fr auto}}
-    .field{
-      background:var(--panel-2);
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:12px;padding:12px 14px;color:var(--text);width:100%;
-    }
+    .field{background:var(--panel-2);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:12px 14px;color:var(--text);width:100%}
     .field:focus{outline:none;box-shadow:var(--ring);border-color:rgba(255,255,255,.18)}
-    select.field{
-      appearance:none;
-      background-image:
-        linear-gradient(45deg,transparent 50%, rgba(255,255,255,.5) 50%),
-        linear-gradient(135deg, rgba(255,255,255,.5) 50%, transparent 50%);
-      background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%;
-      background-size:6px 6px,6px 6px;background-repeat:no-repeat;
-    }
-    .btn{
-      background:linear-gradient(90deg,var(--brand),var(--brand-2));
-      color:#fff;border:none;border-radius:12px;padding:12px 18px;
-      font-weight:900;cursor:pointer;white-space:nowrap;
-      box-shadow:0 8px 20px rgba(255,106,0,.20);transition:transform .12s ease;
-    }
+    select.field{appearance:none;background-image:linear-gradient(45deg,transparent 50%,rgba(255,255,255,.5) 50%),linear-gradient(135deg,rgba(255,255,255,.5) 50%,transparent 50%);
+      background-position:calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size:6px 6px,6px 6px;background-repeat:no-repeat}
+    .btn{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;border:none;border-radius:12px;padding:12px 18px;
+      font-weight:900;cursor:pointer;white-space:nowrap;box-shadow:0 8px 20px rgba(255,106,0,.20);transition:transform .12s ease}
     .btn:hover{transform:translateY(-1px)}
-    .btn:active{transform:translateY(0)}
-
     footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.06);color:#9da3aa;text-align:center;font-size:14px}
   </style>
-
-  <!-- Schema.org -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"TradeScout",
-    "url":"https://info.thetradescout.us/",
-    "logo":"https://info.thetradescout.us/assets/icon.svg",
-    "description":"TradeScout connects homeowners and verified contractors directly—no gatekeepers, no spam."
-  }
-  </script>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- Header (no Services link) -->
   <header>
     <div class="container nav">
       <div class="brand">TradeScout</div>
-      <button class="cta" data-scroll="#signup" aria-label="Get early access">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/>
-        </svg>
+      <a class="cta" href="#signup" aria-label="Get early access">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
-      </button>
-      <noscript><a class="cta cta-link" href="#signup">Get Early Access</a></noscript>
+      </a>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero container">
     <h1>Connection Without Compromise</h1>
-    <p>
-      Trusted by <strong>500,000+ homeowners &amp; contractors</strong> across the U.S.
-      Skip the noise and connect with the right people—fast.
-    </p>
+    <p>Trusted by <strong>500,000+ homeowners &amp; contractors</strong> across the U.S. Skip the noise and connect with the right people—fast.</p>
     <div class="cta-wrap">
-      <button class="cta" data-scroll="#signup" aria-label="Get early access">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/>
-        </svg>
+      <a class="cta" href="#signup" aria-label="Get early access">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3 7h7l-5.7 4.1 2.3 7-6.6-4.8-6.6 4.8 2.3-7L2 9h7z"/></svg>
         Get Early Access
-      </button>
-      <noscript><a class="cta cta-link" href="#signup">Get Early Access</a></noscript>
+      </a>
     </div>
   </section>
 
-  <!-- Features -->
+  <!-- Why TradeScout -->
   <section class="container" id="why" aria-labelledby="whytitle" style="margin-top:32px">
     <h2 id="whytitle" class="section-title">Why TradeScout?</h2>
     <div class="feature-grid">
       <article class="card">
-        <div class="card-media" role="img" aria-label="Accelerated growth">
-          <img src="assets/images/accelerated-growth.jpg" alt="" loading="lazy" decoding="async">
-        </div>
+        <div class="card-media bg-accel"></div>
         <div class="card-body">
           <h3>Accelerated Growth</h3>
           <p>Get in front of real homeowners—no paywall, no junk leads.</p>
         </div>
       </article>
-
       <article class="card">
-        <div class="card-media" role="img" aria-label="Find helpers and employees">
-          <img src="assets/images/find-helpers-employees.jpg" alt="" loading="lazy" decoding="async">
-        </div>
+        <div class="card-media bg-helpers"></div>
         <div class="card-body">
           <h3>Find Helpers &amp; Employees</h3>
           <p>Post roles, meet reliable helpers, and build your crew faster.</p>
         </div>
       </article>
-
       <article class="card">
-        <div class="card-media" role="img" aria-label="Direct connection">
-          <img src="assets/images/direct-connect.jpg" alt="" loading="lazy" decoding="async">
-        </div>
+        <div class="card-media bg-direct"></div>
         <div class="card-body">
           <h3>Direct Connect</h3>
           <p>Homeowners and contractors, connected directly—no middlemen.</p>
         </div>
       </article>
-
       <article class="card">
-        <div class="card-media" role="img" aria-label="Homeowner tools">
-          <img src="assets/images/homeowner-tools.jpg" alt="" loading="lazy" decoding="async">
-        </div>
+        <div class="card-media bg-tools"></div>
         <div class="card-body">
           <h3>Homeowner Tools</h3>
           <p>Plan projects, request bids, and hire with confidence.</p>
@@ -259,48 +160,35 @@
     </div>
   </section>
 
-  <!-- Ribbon -->
-  <div class="ribbon" role="status" aria-live="polite">
-    Join 500,000+ people who already trust TradeScout. Be part of the future of home improvement.
-  </div>
+  <!-- Social proof -->
+  <div class="ribbon">Join 500,000+ people who already trust TradeScout. Be part of the future of home improvement.</div>
 
-  <!-- Signup -->
+  <!-- Email signup -->
   <section id="signup" class="email container" aria-labelledby="get-started">
     <h2 id="get-started" class="section-title" style="text-align:center">Get Early Access</h2>
     <p class="lead">Drop your email and we’ll notify you the moment we go live.</p>
-
     <form class="form" action="https://formspree.io/f/xovlzjlq" method="POST" data-analytics="signup-form">
-      <div>
-        <label class="sr-only" for="email">Email (required)</label>
-        <input class="field" id="email" type="email" name="email" placeholder="Your Email (required)"
-               required inputmode="email" autocomplete="email" aria-required="true" />
-      </div>
-
-      <div>
-        <label class="sr-only" for="name">Your name (optional)</label>
-        <input class="field" id="name" type="text" name="name" placeholder="Your Name (optional)" autocomplete="name" />
-      </div>
-
-      <div>
-        <label class="sr-only" for="state">Your state (optional)</label>
-        <select class="field" id="state" name="state" autocomplete="address-level1">
-          <option value="">Your State (optional)</option>
-          <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
-          <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
-          <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
-          <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
-          <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
-          <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
-          <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
-          <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
-          <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
-          <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
-          <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
-          <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
-          <option>WI</option><option>WY</option>
-        </select>
-      </div>
-
+      <label class="sr-only" for="email">Email (required)</label>
+      <input class="field" id="email" type="email" name="email" placeholder="Your Email (required)" required inputmode="email" autocomplete="email" aria-required="true" />
+      <label class="sr-only" for="name">Your name (optional)</label>
+      <input class="field" id="name" type="text" name="name" placeholder="Your Name (optional)" autocomplete="name" />
+      <label class="sr-only" for="state">Your state (optional)</label>
+      <select class="field" id="state" name="state" autocomplete="address-level1">
+        <option value="">Your State (optional)</option>
+        <option>AL</option><option>AK</option><option>AZ</option><option>AR</option>
+        <option>CA</option><option>CO</option><option>CT</option><option>DE</option>
+        <option>FL</option><option>GA</option><option>HI</option><option>ID</option>
+        <option>IL</option><option>IN</option><option>IA</option><option>KS</option>
+        <option>KY</option><option>LA</option><option>ME</option><option>MD</option>
+        <option>MA</option><option>MI</option><option>MN</option><option>MS</option>
+        <option>MO</option><option>MT</option><option>NE</option><option>NV</option>
+        <option>NH</option><option>NJ</option><option>NM</option><option>NY</option>
+        <option>NC</option><option>ND</option><option>OH</option><option>OK</option>
+        <option>OR</option><option>PA</option><option>RI</option><option>SC</option>
+        <option>SD</option><option>TN</option><option>TX</option><option>UT</option>
+        <option>VT</option><option>VA</option><option>WA</option><option>WV</option>
+        <option>WI</option><option>WY</option>
+      </select>
       <button class="btn" type="submit" aria-label="Notify me when TradeScout launches">Notify Me</button>
       <input type="hidden" name="_redirect" value="thank-you.html" />
     </form>
@@ -309,22 +197,19 @@
   <footer>© 2025 TradeScout. All rights reserved.</footer>
 
   <script>
-    // Smooth scroll for CTA buttons
-    document.querySelectorAll('[data-scroll]').forEach(btn=>{
-      btn.addEventListener('click', e=>{
-        const el = document.querySelector(btn.getAttribute('data-scroll'));
-        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',e=>{
+        const id=a.getAttribute('href'); const el=document.querySelector(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth',block:'start'}) }
       });
     });
 
-    // Basic analytics hook (optional; connect to GTM/Plausible later)
-    window.dataLayer = window.dataLayer || [];
-    const form = document.querySelector('form[data-analytics="signup-form"]');
-    if(form){
-      form.addEventListener('submit', ()=>{
-        try{ window.dataLayer.push({event:'signup_submit', location:'landing'}); }catch(e){}
-      });
-    }
+    // Basic analytics hook
+    window.dataLayer=window.dataLayer||[];
+    const form=document.querySelector('form[data-analytics="signup-form"]');
+    if(form){ form.addEventListener('submit',()=>{ try{ window.dataLayer.push({event:'signup_submit',location:'landing'}) }catch(e){} }) }
   </script>
 </body>
 </html>
+
