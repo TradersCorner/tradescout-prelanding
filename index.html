@@ -8,15 +8,16 @@
   <meta name="description" content="TradeScout connects homeowners and verified contractors directly—no gatekeepers, no spam. Get early access." />
   <meta name="theme-color" content="#0e0e0f" />
   <link rel="canonical" href="https://info.thetradescout.us/" />
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HYL5JRZNJZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-HYL5JRZNJZ');
-</script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HYL5JRZNJZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-HYL5JRZNJZ');
+  </script>
+
   <!-- Social (updated to logo.png) -->
   <meta property="og:title" content="TradeScout — Connection Without Compromise" />
   <meta property="og:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
@@ -28,7 +29,7 @@
   <meta name="twitter:description" content="Direct connection between homeowners and verified contractors. No middlemen." />
   <meta name="twitter:image" content="https://info.thetradescout.us/assets/images/logo.png" />
 
-  <!-- Icons (new) -->
+  <!-- Icons -->
   <link rel="icon" href="assets/images/logo.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="assets/images/logo.png" />
 
@@ -68,7 +69,6 @@
       border-bottom:1px solid rgba(255,255,255,.06);
     }
     .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-    /* updated brand styles to support the circle icon */
     .brand{display:inline-flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.2px;font-size:22px}
     .brand-icon{width:28px;height:28px;border-radius:50%;object-fit:cover;border:1px solid rgba(255,255,255,.12)}
     .cta{
@@ -81,6 +81,9 @@
     }
     .cta:hover{transform:translateY(-1px)}
     .cta svg{opacity:.9}
+    /* (kept) optional icon class if you use it later */
+    .cta .icon{width:16px;height:16px;margin-right:10px;flex:0 0 auto;display:inline-block;vertical-align:middle;opacity:.95}
+    .cta:focus-visible{outline:none; box-shadow:0 0 0 3px rgba(255,106,0,.35)}
 
     /* Hero */
     .hero{padding:72px 0 32px;text-align:center}
@@ -95,7 +98,7 @@
     }
     .hero .cta-wrap{margin-top:28px}
 
-    /* Why grid (CSS backgrounds) */
+    /* Sections */
     .section-title{font-size:22px;font-weight:900;letter-spacing:.2px;margin:0 0 22px}
     .feature-grid{display:grid;gap:18px;grid-template-columns:repeat(12,1fr)}
     .card{
@@ -114,7 +117,6 @@
       background-size:cover;background-position:center;
     }
     .card-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15),rgba(0,0,0,.35))}
-    /* exact filenames */
     .bg-accel  { background-image:url('assets/images/accelerated-growth.jpg?v=4'); }
     .bg-helpers{ background-image:url('assets/images/find-helpers-employees.jpg?v=4'); }
     .bg-direct { background-image:url('assets/images/direct-connect.jpg?v=4'); }
@@ -123,7 +125,7 @@
     .card h3{margin:0 0 8px;font-size:18px;font-weight:900}
     .card p{margin:0;color:var(--muted);line-height:1.65}
 
-    /* Reviews (two only) */
+    /* Reviews */
     .reviews{padding:42px 0 12px}
     .reviews h2{margin:0 0 18px;font-size:22px;font-weight:900;letter-spacing:.2px}
     .reviews-grid{display:grid;gap:24px;grid-template-columns:1fr;max-width:900px;margin:0 auto;text-align:center}
@@ -167,6 +169,26 @@
     }
     .btn:hover{transform:translateY(-1px)}
     footer{padding:34px 0;border-top:1px solid rgba(255,255,255,.06);color:#9da3aa;text-align:center;font-size:14px}
+
+    /* NEW: Roles (multi-select) group */
+    .checkgroup{
+      display:flex; flex-wrap:wrap; gap:10px;
+      background:var(--panel-2);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:12px; padding:10px 12px; color:var(--text);
+    }
+    .checkgroup legend{
+      font-size:12px; letter-spacing:.2px; color:var(--muted);
+      padding:0 6px; margin:0 0 6px;
+    }
+    .checkgroup label{
+      display:inline-flex; align-items:center; gap:8px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:10px; padding:8px 10px; cursor:pointer;
+    }
+    .checkgroup input[type="checkbox"]{ accent-color: var(--brand); }
+    .form .full { grid-column: 1 / -1; }
   </style>
 </head>
 <body>
@@ -174,7 +196,6 @@
   <!-- Header -->
   <header>
     <div class="container nav">
-      <!-- brand updated to include circle logo -->
       <div class="brand">
         <img class="brand-icon" src="assets/images/logo.png" alt="" width="28" height="28" decoding="async">
         <span>TradeScout</span>
@@ -198,11 +219,10 @@
     </div>
   </section>
 
-  <!-- Why TradeScout (Homeowner Tools first) -->
+  <!-- Why TradeScout -->
   <section class="container" id="why" aria-labelledby="whytitle" style="margin-top:32px">
     <h2 id="whytitle" class="section-title">Why TradeScout?</h2>
     <div class="feature-grid">
-      <!-- 1) Homeowner Tools -->
       <article class="card">
         <div class="card-media bg-tools"></div>
         <div class="card-body">
@@ -211,7 +231,6 @@
         </div>
       </article>
 
-      <!-- 2) Accelerated Growth -->
       <article class="card">
         <div class="card-media bg-accel"></div>
         <div class="card-body">
@@ -220,7 +239,6 @@
         </div>
       </article>
 
-      <!-- 3) Find Helpers & Employees -->
       <article class="card">
         <div class="card-media bg-helpers"></div>
         <div class="card-body">
@@ -229,7 +247,6 @@
         </div>
       </article>
 
-      <!-- 4) Direct Connect -->
       <article class="card">
         <div class="card-media bg-direct"></div>
         <div class="card-body">
@@ -240,7 +257,7 @@
     </div>
   </section>
 
-  <!-- Reviews (exact usernames, 2 only) -->
+  <!-- Reviews -->
   <section class="reviews container" aria-labelledby="reviewstitle">
     <h2 id="reviewstitle">What People Are Saying</h2>
     <div class="reviews-grid">
@@ -256,7 +273,7 @@
     </div>
   </section>
 
-  <!-- Network banner (non-salesy) -->
+  <!-- Network banner -->
   <div class="ribbon">
     Join 500,000+ people already connected through the TradeScout network.
   </div>
@@ -267,12 +284,15 @@
     <p class="lead">Drop your email and we’ll notify you the moment we go live.</p>
 
     <form class="form" action="https://formspree.io/f/xovlzjlq" method="POST" data-analytics="signup-form">
+      <!-- Email (required) -->
       <label class="sr-only" for="email">Email (required)</label>
       <input class="field" id="email" type="email" name="email" placeholder="Your Email (required)" required inputmode="email" autocomplete="email" aria-required="true" />
 
+      <!-- Name (optional) -->
       <label class="sr-only" for="name">Your name (optional)</label>
       <input class="field" id="name" type="text" name="name" placeholder="Your Name (optional)" autocomplete="name" />
 
+      <!-- State (optional) -->
       <label class="sr-only" for="state">Your state (optional)</label>
       <select class="field" id="state" name="state" autocomplete="address-level1">
         <option value="">Your State (optional)</option>
@@ -291,8 +311,32 @@
         <option>WI</option><option>WY</option>
       </select>
 
-      <button class="btn" type="submit" aria-label="Notify me when TradeScout launches">Notify Me</button>
+      <!-- Roles (multi-select) -->
+      <fieldset class="checkgroup full" aria-labelledby="roles-legend">
+        <legend id="roles-legend">I am a… (select all that apply)</legend>
+
+        <label>
+          <input type="checkbox" name="roles[]" value="Homeowner">
+          Homeowner
+        </label>
+
+        <label>
+          <input type="checkbox" name="roles[]" value="Contractor">
+          Contractor
+        </label>
+
+        <label>
+          <input type="checkbox" name="roles[]" value="Service Provider">
+          Service Provider
+        </label>
+      </fieldset>
+
+      <!-- Submit -->
+      <button class="btn" type="submit">Notify Me</button>
       <input type="hidden" name="_redirect" value="thank-you.html" />
+
+      <!-- Honeypot to reduce spam -->
+      <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none">
     </form>
   </section>
 
